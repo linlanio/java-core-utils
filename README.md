@@ -7,21 +7,23 @@ JAVA代码核心工具类，包括核心、缓存、系统、脚本处理，数�
 命令行：
 mvn clean install
 
+1.0     2023-11-22      调整配置，修改md文件，优化链接，验证两个子包代码
 1.0     2023-09-29      pom文件的parent内增加relativePath配置
-
 1.0     2019-06-18      创建版本，进行结构划分，打包验证及本地发布
 
 ```
 
 ## 子包简介
 1. commons-parent:公共的工具核心、JSON工具、缓存工具类等子包，版本：2.1
+   [版本更新链接](./commons-parent/README.md)
 2. datas-parent:公共的数据处理核心，多数据源链接等工具类，版本：2.0
-
+   [版本更新链接](./datas-parent/README.md)
 
 ## 技术路径
 ### 软件架构
+```
 Springboot
-
+```
 ### 安装教程
 1. mvn clean install
 2. mvn clean deploy
@@ -42,10 +44,10 @@ Springboot
 1.  Fork 本仓库
 2.  新建 Feat_1.0.0 分支
 3.  提交代码
-4.  新建 Pull Request
 ```
 git config user.name linlaninfo
 git config user.email linlanio@qq.com
 git config --global --list
 git config --list
 ```
+4.  新建 Pull Request

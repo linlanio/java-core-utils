@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>io.linlan.commons</groupId>
+    <artifactId>commons-parent</artifactId>
+    <packaging>pom</packaging>
+    <version>2.1</version>
+    <name>commons-parent</name>
+    <description>
+        The commons parent is a parent pom for all the commons projects to inherit and inherit from io.linlan.
+        The commons parent defines all commons artifact's environment, tools, authors, social contacts and other things.
+        Thanks for your attention.
+        Stay Hungry! Stay Foolish!
+    </description>
+
+    <modules>
+        <module>commons-core</module>
+        <module>commons-cache</module>
+        <module>commons-db</module>
+        <module>commons-env</module>
+        <module>commons-script</module>
+
+    </modules>
+
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!--    <checkstyle.version>2.15</checkstyle.version>-->
+        <organization.logo>https://linlan.io/images/linlan_logo_wide.gif</organization.logo>
+        <spring.version>5.0.4.RELEASE</spring.version>
+        <spring.boot.version>2.0.0.RELEASE</spring.boot.version>
+        <spring.data.version>2.0.5.RELEASE</spring.data.version>
+        <spring.data.redis.version>2.0.0.RELEASE</spring.data.redis.version>
+        <mybatis.version>3.4.4</mybatis.version>
+        <caucho.hessian.version>4.0.38</caucho.hessian.version>
+        <fastjson.version>1.2.83</fastjson.version>
+        <fasterxml.jackson.version>2.9.4</fasterxml.jackson.version>
+        <slf4j.version>1.7.21</slf4j.version>
+        <jedis.version>2.9.0</jedis.version>
+        <javax.servlet.version>3.1.0</javax.servlet.version>
+        <javax.validation.version>2.0.1.Final</javax.validation.version>
+        <lombok.version>1.18.22</lombok.version>
+        <github.pagehelper.version>5.2.0</github.pagehelper.version>
+
+        <linlan.commons.version>2.2.0</linlan.commons.version>
+
+    </properties>
+
+    <build>
+        <sourceDirectory>src/main/java</sourceDirectory>
+        <resources>
+            <resource>
+                <directory>src</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                    <include>**/*.properties</include>
+                </includes>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.7.0</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <archive>
+                        <addMavenDescriptor>false</addMavenDescriptor>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+            <!-- JAVA DOC 文档打包
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.5.0</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <encoding>UTF-8</encoding>
+                    <docencoding>UTF-8</docencoding>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>-->
+            <!-- 源代码信息打包-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.3.0</version>
+                <configuration>
+                    <attach>true</attach>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>aliyun-nexus</id>
+            <name>Nexus</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+        </repository>
+    </repositories>
+
+
+</project>
