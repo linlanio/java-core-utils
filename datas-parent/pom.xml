@@ -24,6 +24,8 @@
         <h2.version>1.4.196</h2.version>
 
         <linlan.commons.version>2.2.0</linlan.commons.version>
+        <linlan.datas.version>1.4.1</linlan.datas.version>
+
     </properties>
 
     <build>
