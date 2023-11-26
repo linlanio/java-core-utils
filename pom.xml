@@ -4,10 +4,10 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>io.linlan.commons</groupId>
+    <groupId>io.linlan.utils</groupId>
     <artifactId>java-core-utils</artifactId>
     <packaging>pom</packaging>
-    <version>1.0</version>
+    <version>4</version>
     <name>java-core-utils</name>
     <description>
         The LINLAN Technology provides service for persons or enterprises in software projects.
@@ -33,15 +33,13 @@
 
     </build>
 
-    <repositories>
+    <distributionManagement>
         <repository>
-            <id>aliyun-nexus</id>
-            <name>Nexus</name>
-            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <id>github</id>
+            <name>GitHub LinlanIO Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/linlanio/java-core-utils</url>
         </repository>
-    </repositories>
-
-
+    </distributionManagement>
 
 </project>
 

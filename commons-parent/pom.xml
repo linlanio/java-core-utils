@@ -6,7 +6,7 @@
     <groupId>io.linlan.commons</groupId>
     <artifactId>commons-parent</artifactId>
     <packaging>pom</packaging>
-    <version>2.1</version>
+    <version>2.2</version>
     <name>commons-parent</name>
     <description>
         The commons parent is a parent pom for all the commons projects to inherit and inherit from io.linlan.
@@ -45,7 +45,7 @@
         <lombok.version>1.18.22</lombok.version>
         <github.pagehelper.version>5.2.0</github.pagehelper.version>
 
-        <linlan.commons.version>2.2.0</linlan.commons.version>
+        <linlan.commons.version>2.2.1</linlan.commons.version>
 
     </properties>
 
@@ -123,13 +123,12 @@
         </plugins>
     </build>
 
-    <repositories>
+    <distributionManagement>
         <repository>
-            <id>aliyun-nexus</id>
-            <name>Nexus</name>
-            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <id>github</id>
+            <name>GitHub LinlanIO Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/linlanio/java-core-utils</url>
         </repository>
-    </repositories>
-
+    </distributionManagement>
 
 </project>

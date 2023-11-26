@@ -23,8 +23,8 @@
         <spring.version>4.3.10.RELEASE</spring.version>
         <h2.version>1.4.196</h2.version>
 
-        <linlan.commons.version>2.2.0</linlan.commons.version>
-        <linlan.datas.version>1.4.1</linlan.datas.version>
+        <linlan.commons.version>2.2.1</linlan.commons.version>
+        <linlan.datas.version>2.0.0</linlan.datas.version>
       
     </properties>
 
@@ -84,13 +84,12 @@
         </plugins>
     </build>
 
-    <repositories>
+    <distributionManagement>
         <repository>
-            <id>aliyun-nexus</id>
-            <name>Nexus</name>
-            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <id>github</id>
+            <name>GitHub LinlanIO Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/linlanio/java-core-utils</url>
         </repository>
-    </repositories>
-
+    </distributionManagement>
 
 </project>
