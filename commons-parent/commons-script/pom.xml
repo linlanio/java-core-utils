@@ -6,12 +6,12 @@
     <parent>
         <groupId>io.linlan.commons</groupId>
         <artifactId>commons-parent</artifactId>
-        <version>2.1</version>
+        <version>2.2</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <artifactId>commons-script</artifactId>
     <packaging>jar</packaging>
-    <version>2.2.0</version>
+    <version>${linlan.commons.version}</version>
     <name>commons-script</name>
 
     <properties>

@@ -2,6 +2,8 @@
 ## Version Graph
 ```
 
+2.0.0       2023-11-26      pom文件的配置调整，增加distributionManagement，删除repository
+
 1.4.1       2023-11-18      pom文件的配置调整，优化引用关系，规范groupId名称
 1.4.0       2023-10-07      pom文件的parent内增加relativePath配置
 
