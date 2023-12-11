@@ -23,7 +23,7 @@
         <spring.version>4.3.10.RELEASE</spring.version>
         <h2.version>1.4.196</h2.version>
 
-        <linlan.commons.version>2.2.1</linlan.commons.version>
+        <linlan.commons.version>2.2.2</linlan.commons.version>
         <linlan.datas.version>2.0.0</linlan.datas.version>
       
     </properties>

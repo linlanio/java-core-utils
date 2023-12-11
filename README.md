@@ -52,4 +52,17 @@ git config user.email linlanio@qq.com
 git config --global --list
 git config --list
 ```
-4.  新建 Pull Request
+4. 新建 Pull Request
+5. 创建和提交tag
+```
+创建
+git tag -a v4 -m "create new tag v4"
+查看
+git tag
+提交
+git push origin --tags
+删除
+git tag -d v4
+
+```
+6. 其他

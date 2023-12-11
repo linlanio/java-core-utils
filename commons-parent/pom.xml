@@ -45,7 +45,7 @@
         <lombok.version>1.18.22</lombok.version>
         <github.pagehelper.version>5.2.0</github.pagehelper.version>
 
-        <linlan.commons.version>2.2.1</linlan.commons.version>
+        <linlan.commons.version>2.2.2</linlan.commons.version>
 
     </properties>
 

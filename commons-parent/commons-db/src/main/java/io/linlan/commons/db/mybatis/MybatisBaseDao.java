@@ -15,6 +15,8 @@
  */
 package io.linlan.commons.db.mybatis;
 
+import com.github.pagehelper.Page;
+
 import java.util.List;
 import java.util.Map;
 
@@ -42,10 +44,10 @@ public interface MybatisBaseDao<T> {
 
     /** get page of entity with input map conditions
      *
-     * @param map the input conditions
+     * @param param the input conditions
      * @return the Page of T
      */
-    List<T> getPage(Map<String, Object> map);
+    Page<T> getPage(Object param);
 
     /** find the entity by id
      *
@@ -53,6 +55,13 @@ public interface MybatisBaseDao<T> {
      * @return T the entity
      */
     T findById(Object id);
+
+    /** get the dto by id
+     *
+     * @param id the id
+     * @return T the dto extend entity
+     */
+    T getById(Object id);
 
     /** save entity of input t
      *
@@ -107,17 +116,17 @@ public interface MybatisBaseDao<T> {
      */
     int delete(Map<String, Object> map);
 
-    /** query tht total result
+    /** get the total count
      *
      * @return total count
      */
-    int queryTotal();
+    int getCount();
 
-    /** query tht total result by select conditions
+    /** get the result by select conditions
      *
      * @param map the input select conditions
-     * @return total count
+     * @return get count
      */
-    int queryTotal(Map<String, Object> map);
+    int getCount(Map<String, Object> map);
 
 }
