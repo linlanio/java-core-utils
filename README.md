@@ -38,7 +38,7 @@ Springboot
       <artifactId>${artifactId}</artifactId>
       <version>${project.version}</version>
       <scope>test</scope>
-   </dependency>`
+   </dependency>
 ```
 2. 直接拷贝打包后的jar包
 
