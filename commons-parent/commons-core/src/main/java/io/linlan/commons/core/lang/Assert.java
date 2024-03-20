@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,9 +15,9 @@
  */
 package io.linlan.commons.core.lang;
 
+import io.linlan.commons.core.CollectionUtils;
 import io.linlan.commons.core.ObjectUtils;
 import io.linlan.commons.core.StringUtils;
-import io.linlan.commons.core.CollectionUtils;
 
 import java.util.Collection;
 import java.util.Map;
@@ -44,19 +44,18 @@ import java.util.Map;
  *
  * <pre class="code">
  * Assert.notNull(clazz, "The class must not be null");
- * Assert.isTrue(i &lt; 0, "The value must be greater than zero");</pre>
+ * Assert.isTrue(i > 0, "The value must be greater than zero");</pre>
  *
  * <p>Mainly for internal use within the framework; consider
  * <a href="http://commons.apache.org/proper/commons-lang/">Apache's Commons Lang</a>
  * for a more comprehensive suite of {@code String} utilities.
  *
- * @author <a href="mailto:20400301@qq.com">linlan</a>
  * @author Keith Donald
  * @author Juergen Hoeller
  * @author Colin Sampaleanu
  * @author Rob Harrop
  * @author Sam Brannen
- * Createtime 2017/7/12 14:16
+ * Createtime 2020/7/12 14:16
  *
  * @version 1.0
  * @since 1.0

@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,7 +24,6 @@ import java.util.Map;
  * Desc:Need to define and implement the method in annotation or
  * in XML
  *
- * @author <a href="mailto:20400301@qq.com">linlan</a>
  * CreateTime:2017-07-03 1:57 PM
  *
  * @version 1.0
@@ -107,17 +106,18 @@ public interface MybatisBaseDao<T> {
      */
     int delete(Map<String, Object> map);
 
-    /** query tht total result
+    /** get the total result
      *
      * @return total count
      */
-    int queryTotal();
+    int getTotal();
 
-    /** query tht total result by select conditions
+    /** get the count by select conditions
      *
      * @param map the input select conditions
-     * @return total count
+     * @return count
      */
-    int queryTotal(Map<String, Object> map);
+    int getCount(Map<String, Object> map);
 
 }
+

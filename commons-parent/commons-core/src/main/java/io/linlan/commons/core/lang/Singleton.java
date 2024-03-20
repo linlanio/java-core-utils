@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,8 +25,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * Filename:Singleton.java
  * Desc:Singleton class to use ConcurrentHashMap pool to manage.
  *
- * @author <a href="mailto:20400301@qq.com">linlan</a>
- * Createtime 2017/7/2 8:49 PM
+ * Createtime 2020/7/2 8:49 PM
  * 
  * @version 1.0
  * @since 1.0
@@ -34,7 +33,7 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public final class Singleton {
     /**
-     * the global pool to manage single class
+     * the base pool to manage single class
      */
     private static Map<Class<?>, Object> pool = new ConcurrentHashMap<>();
 

@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,8 +27,7 @@ import java.security.NoSuchAlgorithmException;
  * Desc:String utils include isBlank, startsWith, trim methods
  * the utils is for commons group packages to use
  *
- * @author <a href="mailto:20400301@qq.com">linlan</a>
- * Createtime 2017/6/30 8:41 PM
+ * Createtime 2020/6/30 8:41 PM
  *
  * @version 1.0
  * @since 1.0

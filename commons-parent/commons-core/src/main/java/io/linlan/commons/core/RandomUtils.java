@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,36 +22,29 @@ import java.util.*;
 
 /**
  * Random class to provide utils for use
- * Filename:linlanils.java
+ * Filename:RandomUtils.java
  * Desc:Random utils include UUID, random of string, number,
  * mix with string and number methods
  * the utils is for commons group packages to use
  *
- * @author linlan
- * @author <a href="mailto:20400301@qq.com">linlan</a>
- * Createtime 2017/7/11 17:14
+ * @author Linlan
+ * Createtime 2020/7/11 17:14
  *
  * @version 1.0
  * @since 1.0
  *
  */
 public final class RandomUtils extends CoreExtConstants {
+    private  static SnowFlake idWorker;
     /**
-     * Long类型ID生成器
-     */
-    private  static SnowFlake lidGenerator;
-    /**
-     * 默认随机字符类型长度
+     * RANDOM_STRING_LENGTH
      */
     public static final int RANDOM_STRING_LENGTH = 15;
     /**
-     * 默认随机长整型类型长度
+     * RANDOM_LONG_LENGTH
      */
     public static final int RANDOM_LONG_LENGTH = 8;
 
-    /**
-     * 末尾秒单位
-     */
     private static Long lastMills = 0L;
     /**
      * constructor of self
@@ -61,9 +54,9 @@ public final class RandomUtils extends CoreExtConstants {
     }
 
     /**
-     * 随机数生成器
+     * RANDOM
      */
-    private static final Random defaultRandom = new Random();
+    private static final Random RANDOM = new Random();
 
     /**
      * get the whole UUID with -
@@ -87,7 +80,8 @@ public final class RandomUtils extends CoreExtConstants {
      * @return int in random
      */
     public static int random() {
-        return defaultRandom.nextInt();
+        Random random = new Random();
+        return random.nextInt();
     }
 
     /**
@@ -97,7 +91,8 @@ public final class RandomUtils extends CoreExtConstants {
      * @return int
      */
     public static int random(int bound) {
-        return defaultRandom.nextInt(bound);
+        Random random = new Random();
+        return random.nextInt(bound);
     }
 
     /**
@@ -108,7 +103,8 @@ public final class RandomUtils extends CoreExtConstants {
      * @return int
      */
     public static int random(int min, int max) {
-        return defaultRandom.nextInt(max - min) + min;
+        Random random = new Random();
+        return random.nextInt(max - min) + min;
     }
 
     /**
@@ -152,9 +148,9 @@ public final class RandomUtils extends CoreExtConstants {
      */
     public static String random(int count, char... chars) {
         if (chars != null && chars.length > 0) {
-            return random(count, 0, chars.length, false, false, chars, defaultRandom);
+            return random(count, 0, chars.length, false, false, chars, RANDOM);
         }
-        return random(count, 0, 0, false, false, CHARS_WHOLE_62, defaultRandom);
+        return random(count, 0, 0, false, false, CHARS_WHOLE_62, RANDOM);
     }
 
     /**
@@ -415,12 +411,12 @@ public final class RandomUtils extends CoreExtConstants {
      * @return
      */
     public static long randomLid() {
-        if(lidGenerator ==null){
+        if(idWorker==null){
             int workId = (int)(Math.random()*8);//机器码，集群的时候随机生成一个，还是可能会重复。。
             int datacenterId = (int)(Math.random()*8);
-            lidGenerator = new SnowFlake(Long.valueOf(workId), Long.valueOf(datacenterId));
+            idWorker = new SnowFlake(Long.valueOf(workId), Long.valueOf(datacenterId));
         }
-        return  lidGenerator.nextId();
+        return  idWorker.nextId();
     }
 
 
@@ -501,9 +497,9 @@ public final class RandomUtils extends CoreExtConstants {
 //        System.out.println((aa+"").length());
 
 
-//        for(int i=0;i<100;i++){
-//            System.out.println(randomLid());
-//        }
+        for(int i=0;i<100;i++){
+            System.out.println(randomLid());
+        }
     }
 
 }

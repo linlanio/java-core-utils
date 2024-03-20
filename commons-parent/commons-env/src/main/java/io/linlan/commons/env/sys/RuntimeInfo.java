@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,8 +23,7 @@ import io.linlan.commons.core.io.FileUtils;
  * Desc: runtime info
  * to get max memory, total memory, free memory, usable memory
  *
- * @author <a href="mailto:20400301@qq.com">linlan</a>
- * CreateTime:2017/7/4 16:49
+ * CreateTime:2020/7/4 16:49
  *
  * @version 1.0
  * @since 1.0

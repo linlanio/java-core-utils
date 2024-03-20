@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,9 +20,8 @@ package io.linlan.datas.core.abs;
  * Filename:Initializing.java
  * Desc: 初始化接口类，在属性设置后进行操作
  *
- * @author linlan of linlan.io
- * @author <a href="mailto:20400301@qq.com">linlan</a>
- * CreateTime:2017/12/20 22:13
+ * @author Linlan
+ * CreateTime:2020/12/20 22:13
  *
  * @version 1.0
  * @since 1.0

@@ -22,7 +22,7 @@ Springboot
       <artifactId>${artifactId}</artifactId>
       <version>${project.version}</version>
       <scope>test</scope>
-   </dependency>`
+   </dependency>
 ```
 2. use direct jar
 

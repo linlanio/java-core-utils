@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,8 +25,7 @@ import java.nio.charset.StandardCharsets;
  * Filename:CharsetUtils.java
  * Desc:Charset utils include convert, default utils
  *
- * @author <a href="mailto:20400301@qq.com">linlan</a>
- * CreateTime:2017-06-30 10:15 PM
+ * CreateTime:2020-06-30 10:15 PM
  *
  * @version 1.0
  * @since 1.0
@@ -37,8 +36,7 @@ public final class CharsetUtils extends CharsetConstants {
     /**
      * constructor of self
      */
-    private CharsetUtils()
-    {
+    private CharsetUtils() {
 
     }
 
@@ -48,8 +46,7 @@ public final class CharsetUtils extends CharsetConstants {
      * @param name charset name, if null the return default charset
      * @return Charset
      */
-    public static Charset getCharset(final String name)
-    {
+    public static Charset getCharset(final String name) {
         return StringUtils.isBlank(name) ? Charset.defaultCharset() : Charset.forName(name);
     }
 
@@ -60,8 +57,7 @@ public final class CharsetUtils extends CharsetConstants {
      * @param destCharsetName desi charset name, the default is UTF-8
      * @return Charset
      */
-    public static String convert(final String source, String srcCharsetName, String destCharsetName)
-    {
+    public static String convert(final String source, String srcCharsetName, String destCharsetName) {
         return convert(source, getCharset(srcCharsetName), getCharset(destCharsetName));
     }
 
@@ -72,8 +68,7 @@ public final class CharsetUtils extends CharsetConstants {
      * @param destCharset desi Charset, the default is UTF-8
      * @return Charset
      */
-    public static String convert(final String source, Charset srcCharset, Charset destCharset)
-    {
+    public static String convert(final String source, Charset srcCharset, Charset destCharset) {
         if (null == srcCharset)
         {
             srcCharset = StandardCharsets.ISO_8859_1;

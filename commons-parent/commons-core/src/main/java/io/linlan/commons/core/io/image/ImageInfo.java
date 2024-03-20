@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,8 +27,7 @@ import java.util.Vector;
  * number of images, comments and physical resolution from 
  * JPEG, GIF, BMP, PCX, PNG, IFF, RAS, PBM, PGM, PPM and PSD files 
  * (or input streams).
- * @author <a href="mailto:20400301@qq.com">linlan</a>
- * Createtime 2017/7/12 10:13 PM
+ * Createtime 2020/7/12 10:13 PM
  *
  * @version 1.0
  * @since 1.0
@@ -287,7 +286,7 @@ public class ImageInfo {
     private boolean checkGif() throws IOException {
         final byte[] GIF_MAGIC_87A = {0x46, 0x38, 0x37, 0x61};
         final byte[] GIF_MAGIC_89A = {0x46, 0x38, 0x39, 0x61};
-        byte[] a = new byte[11]; // 4 from the GIF signature + 7 from the global header
+        byte[] a = new byte[11]; // 4 from the GIF signature + 7 from the base header
         if (read(a) != 11) {
             return false;
         }
@@ -304,7 +303,7 @@ public class ImageInfo {
         if (!determineNumberOfImages) {
             return true;
         }
-        // skip global color palette
+        // skip base color palette
         if ((flags & 0x80) != 0) {
             int tableSize = (1 << ((flags & 7) + 1)) * 3;
             skip(tableSize);
@@ -883,8 +882,7 @@ public class ImageInfo {
      *
      * @return the number of comments
      */
-    public int getNumberOfComments()
-    {
+    public int getNumberOfComments() {
         if (comments == null) {
             return 0;
         } else {
@@ -897,8 +895,7 @@ public class ImageInfo {
      *
      * @return the number of images
      */
-    public int getNumberOfImages()
-    {
+    public int getNumberOfImages() {
         return numberOfImages;
     }
 
@@ -992,8 +989,7 @@ public class ImageInfo {
      *
      * @return the progressive
      */
-    public boolean isProgressive()
-    {
+    public boolean isProgressive() {
         return progressive;
     }
 
@@ -1287,8 +1283,7 @@ public class ImageInfo {
      * @param newValue
      *            the new collect comments
      */
-    public void setCollectComments(boolean newValue)
-    {
+    public void setCollectComments(boolean newValue) {
         collectComments = newValue;
     }
 
@@ -1298,8 +1293,7 @@ public class ImageInfo {
      * @param newValue
      *            the new determine image number
      */
-    public void setDetermineImageNumber(boolean newValue)
-    {
+    public void setDetermineImageNumber(boolean newValue) {
         determineNumberOfImages = newValue;
     }
 

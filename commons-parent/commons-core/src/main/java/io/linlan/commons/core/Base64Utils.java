@@ -17,7 +17,6 @@ import java.nio.charset.Charset;
  *  base64编码是用64（2的6次方）个ASCII字符来表示256（2的8次方）个ASCII字符，<br>
  *  也就是三位二进制数组经过编码后变为四位的ASCII字符显示，长度比原来增加1/3。
  *
- * @author <a href="mailto:20400301@qq.com">linlan</a>
  * CreateTime:12/12/21 3:21 PM
  *
  * @version 1.0
@@ -311,7 +310,6 @@ public class Base64Utils {
      * @param base64 被解码的base64字符串
      * @param out 写出到的流
      * @param isCloseOut 是否关闭输出流
-     * @throws IOException IO异常
      * @since 4.0.9
      */
     public static void decodeToStream(CharSequence base64, OutputStream out, boolean isCloseOut) throws IOException {

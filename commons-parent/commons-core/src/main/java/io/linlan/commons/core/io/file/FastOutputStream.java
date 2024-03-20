@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -34,8 +34,7 @@ import java.nio.charset.Charset;
  * the close {@link #close()} will not truely close the stream
  * <p>
  *
- * @author <a href="mailto:20400301@qq.com">linlan</a>
- * Createtime 2017/7/12 11:45 PM
+ * Createtime 2020/7/12 11:45 PM
  * 
  * @version 1.0
  * @since 1.0
@@ -56,8 +55,7 @@ public class FastOutputStream extends OutputStream {
     }
 
     /**
-     * constructor of self to set minLength with input size
-     * @param size 长度
+     * constructor of self to set size with input size
      */
     public FastOutputStream(int size) {
         fastBuffer = new FastByteBuffer(size);
@@ -125,7 +123,6 @@ public class FastOutputStream extends OutputStream {
      *
      * @param charsetName charset name
      * @return the string of FastOutputStream
-     * @throws UnsupportedEncodingException encoding exception
      */
     public String toString(String charsetName) throws UnsupportedEncodingException {
         return toString(CharsetUtils.getCharset(charsetName));

@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,6 +20,7 @@ import io.linlan.commons.core.HexUtils;
 import io.linlan.commons.core.StringUtils;
 import io.linlan.commons.core.io.file.FastByteBuffer;
 import io.linlan.commons.core.io.file.FastOutputStream;
+import io.linlan.commons.core.io.file.FileReader;
 import io.linlan.commons.core.io.file.FileWriter;
 import io.linlan.commons.core.io.file.IStreamStatus;
 
@@ -39,8 +40,7 @@ import java.nio.charset.Charset;
  * Desc:IO utils to deal with stream, and provide methods such as:
  * copy, read, close, write etc.
  *
- * @author <a href="mailto:20400301@qq.com">linlan</a>
- * Createtime 2017/7/12 10:58 PM
+ * Createtime 2020/7/12 10:58 PM
  *
  * @version 1.0
  * @since 1.0
@@ -549,7 +549,7 @@ public final class IoUtils
      * @throws IORuntimeException IO异常
      */
     public static byte[] readBytes(File file) throws IORuntimeException {
-        return io.linlan.commons.core.io.file.FileReader.create(file).readBytes();
+        return FileReader.create(file).readBytes();
     }
 
     /**

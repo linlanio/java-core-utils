@@ -3,27 +3,36 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>io.linlan.commons</groupId>
-        <artifactId>commons-parent</artifactId>
-        <version>2.2</version>
-        <relativePath>../pom.xml</relativePath>
-    </parent>
+    <groupId>io.linlan.tools</groupId>
     <artifactId>commons-cache</artifactId>
     <packaging>jar</packaging>
-    <version>${linlan.commons.version}</version>
+    <version>${linlan.tools.commons.version}</version>
     <name>commons-cache</name>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-
+        <maven.version>3.1.0</maven.version>
+        <maven.compile.version>3.7.0</maven.compile.version>
+        <mybatis.version>3.4.4</mybatis.version>
+        <caucho.hessian.version>4.0.38</caucho.hessian.version>
+        <ehcache.version>3.2.0</ehcache.version>
+        <spring.data.redis.version>2.0.5.RELEASE</spring.data.redis.version>
+        <linlan.tools.commons.version>2.3.0</linlan.tools.commons.version>
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>io.linlan.commons</groupId>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.linlan.tools</groupId>
             <artifactId>commons-core</artifactId>
-            <version>${linlan.commons.version}</version>
+            <version>${linlan.tools.commons.version}</version>
         </dependency>
         <dependency>
             <groupId>com.caucho</groupId>
@@ -37,5 +46,77 @@
             <version>${spring.data.redis.version}</version>
         </dependency>
     </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <resources>
+            <resource>
+                <filtering>true</filtering>
+                <directory>${basedir}/src/main/resources</directory>
+                <includes>
+                    <include>**/application*.yml</include>
+                    <include>**/application*.yaml</include>
+                    <include>**/application*.properties</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>${basedir}/src/main/resources</directory>
+                <excludes>
+                    <exclude>**/application*.yml</exclude>
+                    <exclude>**/application*.yaml</exclude>
+                    <exclude>**/application*.properties</exclude>
+                </excludes>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compile.version}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>${maven.version}</version>
+                <configuration>
+                    <archive>
+                        <addMavenDescriptor>false</addMavenDescriptor>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>${maven.version}</version>
+                <configuration>
+                    <webResources>
+                        <resource>
+                            <directory>lib/</directory>
+                            <targetPath>WEB-INF/lib</targetPath>
+                            <includes>
+                                <include>**/*.jar</include>
+                            </includes>
+                        </resource>
+                    </webResources>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub LinlanIO Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/linlanio/java-core-utils</url>
+        </repository>
+    </distributionManagement>
 
 </project>

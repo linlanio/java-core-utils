@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,8 +23,7 @@ import java.nio.charset.StandardCharsets;
  * Filename:CharsetConstants.java
  * Desc:the constants of Charset, in this class to define constants
  *
- * @author <a href="mailto:20400301@qq.com">linlan</a>
- * CreateTime:2017-06-28 9:18 PM
+ * CreateTime:2020-06-28 9:18 PM
  *
  * @version 1.0
  * @since 1.0

@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -51,8 +51,7 @@ import javax.xml.transform.stream.StreamResult;
  * Desc:the XML utils in script operations
  * this utils include readXML, parseXML, toString, toFile etc. methods
  *
- * @author <a href="mailto:20400301@qq.com">linlan</a>
- * CreateTime:2017-07-10 10:25 PM
+ * CreateTime:2020-07-10 10:25 PM
  *
  * @version 1.0
  * @since 1.0

@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,9 +22,8 @@ import java.util.List;
  * Filename:AggConfig.java
  * Desc: 聚合配置类，配置信息包括四个内容，用于约定需要进行数据查询和统计分析的要素及条件
  *
- * @author linlan of linlan.io
- * @author <a href="mailto:20400301@qq.com">linlan</a>
- * CreateTime:2017/12/20 22:11
+ * @author Linlan
+ * CreateTime:2020/12/20 22:11
  *
  * @version 1.0
  * @since 1.0

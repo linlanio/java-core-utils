@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,9 +29,8 @@ import java.util.stream.Collector;
  * Filename:CardinalityCollector.java
  * Desc: 基数收集器类，用于进行基数处理
  *
- * @author linlan of linlan.io
- * @author <a href="mailto:20400301@qq.com">linlan</a>
- * CreateTime:2017/12/20 22:11
+ * @author Linlan
+ * CreateTime:2020/12/20 22:11
  *
  * @version 1.0
  * @since 1.0

@@ -21,8 +21,7 @@ import java.net.URLEncoder;
  * Filename:UriUtils.java
  * Desc:URI utils include getUrl, url, deal with URI etc.
  *
- * @author <a href="mailto:20400301@qq.com">linlan</a>
- * CreateTime:2017-07-13 11:18 PM
+ * CreateTime:2020-07-13 11:18 PM
  *
  * @version 1.0
  * @since 1.0

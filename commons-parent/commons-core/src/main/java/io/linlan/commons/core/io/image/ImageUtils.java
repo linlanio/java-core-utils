@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,8 +26,7 @@ import java.util.regex.Pattern;
 /**
  * 文件名：ImageUtils.java
  * 文件说明：核心管理部分图片处理图片辅助工具类
- * @author <a href="mailto:20400301@qq.com">linlan</a>
- * Createtime 2017/7/12 10:13 PM
+ * Createtime 2020/7/12 10:13 PM
  *
  * @version 1.0
  * @since 1.0

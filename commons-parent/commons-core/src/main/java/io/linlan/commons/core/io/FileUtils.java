@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,14 +15,14 @@
  */
 package io.linlan.commons.core.io;
 
+import io.linlan.commons.core.io.file.FileWriter;
+import io.linlan.commons.core.io.file.UnicodeInputStream;
+import io.linlan.commons.core.lang.Assert;
 import io.linlan.commons.core.ArrayUtils;
 import io.linlan.commons.core.CharsetUtils;
 import io.linlan.commons.core.ClassUtils;
 import io.linlan.commons.core.CollectionUtils;
 import io.linlan.commons.core.StringUtils;
-import io.linlan.commons.core.io.file.UnicodeInputStream;
-import io.linlan.commons.core.lang.Assert;
-import io.linlan.commons.core.io.file.FileWriter;
 
 import java.io.*;
 
@@ -48,8 +48,7 @@ import java.util.jar.JarFile;
  * isEmpty, copy, isExist, isDirectory, listFiles etc.
  * the file type include jar, class, zip, doc and other extension.
  *
- * @author <a href="mailto:20400301@qq.com">linlan</a>
- * Createtime 2017/7/12 10:13 PM
+ * Createtime 2020/7/12 10:13 PM
  *
  * @version 1.0
  * @since 1.0
@@ -170,7 +169,7 @@ public final class FileUtils {
      * if input File is a file, then return null, the default fileter is null
      *
      * @param source file or file directory
-     * @return list of file
+     * @return {@link List<File>} list of file
      */
     public static List<File> loopFiles(File source) {
         return loopFiles(source, null);
@@ -182,7 +181,7 @@ public final class FileUtils {
      *
      * @param source file or file directory
      * @param fileFilter file filter, to filter files, only to files, nothing to directory
-     * @return list of file
+     * @return {@link List<File>} list of file
      */
     public static List<File> loopFiles(File source, FileFilter fileFilter) {
         List<File> fileList = new ArrayList<>();
@@ -210,8 +209,8 @@ public final class FileUtils {
      * do not scan the sub directory
      *
      * @param source the relative of ClassPath or absolute path
-     * @return the file's name if whole path,
-     *         if the file is jar, return like .jar!/xxx/xxx
+     * @return List<String> the file's name if whole path,
+     *                      if the file is jar, return like .jar!/xxx/xxx
      * @throws IORuntimeException exception
      */
     public static List<String> listFileNames(String source) throws IORuntimeException {
@@ -1278,7 +1277,7 @@ public final class FileUtils {
     /**
      * 将String写入文件，覆盖模式，字符集为UTF-8
      *
-     * @param source 写入的内容
+     * @param content 写入的内容
      * @param path 文件路径
      * @return 写入的文件
      * @throws IORuntimeException IO异常
@@ -1336,7 +1335,7 @@ public final class FileUtils {
      * @throws IORuntimeException IO异常
      */
     public static File writeString(String source, File file, String charset) throws IORuntimeException {
-        return FileWriter.create(file, CharsetUtils.getCharset(charset)).write(source);
+        return io.linlan.commons.core.io.file.FileWriter.create(file, CharsetUtils.getCharset(charset)).write(source);
     }
 
     /**
@@ -1350,7 +1349,7 @@ public final class FileUtils {
      * @throws IORuntimeException IO异常
      */
     public static File writeString(String source, File file, Charset charset) throws IORuntimeException {
-        return FileWriter.create(file, charset).write(source);
+        return io.linlan.commons.core.io.file.FileWriter.create(file, charset).write(source);
     }
 
     /**
@@ -1389,7 +1388,7 @@ public final class FileUtils {
      * @throws IORuntimeException IO异常
      */
     public static File appendString(String source, File file, String charset) throws IORuntimeException {
-        return FileWriter.create(file, CharsetUtils.getCharset(charset)).append(source);
+        return io.linlan.commons.core.io.file.FileWriter.create(file, CharsetUtils.getCharset(charset)).append(source);
     }
 
     /**

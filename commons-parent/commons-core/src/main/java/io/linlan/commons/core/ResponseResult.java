@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,8 +20,7 @@ import java.io.Serializable;
 /**
  * ResponseResult返回结果包装类
  * @Desc: 接口和服务返回对象类, 支持 member 和 pub 两种模式
- * @author linlan
- * @author <a href="mailto:20400301@qq.com">linlan</a>
+ * @author Linlan
  * CreateTime:2023-07-18 14:06:00
  * @version 1.0
  * @since 1.0
@@ -35,7 +34,7 @@ public class ResponseResult<T> implements Serializable {
     private boolean success = false;
 
     /**
-     * 返回状态码:正常状态为200，0
+     * 返回状态码:正常状态为0
      */
     private String code;
 

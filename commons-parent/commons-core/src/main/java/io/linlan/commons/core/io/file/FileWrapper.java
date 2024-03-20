@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,8 +23,7 @@ import java.nio.charset.Charset;
  * Filename:FileWrapper.java
  * Desc: the file wrapper
  *
- * @author <a href="mailto:20400301@qq.com">linlan</a>
- * CreateTime:2017-08-25 10:39 PM
+ * CreateTime:2020-08-25 10:39 PM
  *
  * @version 1.0
  * @since 1.0

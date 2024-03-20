@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,8 +27,7 @@ import java.util.*;
  * Filename:JsonMapUtils.java
  * Desc: Map JSON utils include analysisToMaps, analysisToMap, toJsonObj, mapToObject,
  *
- * @author linlan
- * @author <a href="mailto:20400301@qq.com">linlan</a>
+ * @author Linlan
  * CreateTime:2020-06-28 8:47 PM
  *
  * @version 1.0

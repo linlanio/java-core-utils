@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,8 +16,8 @@
 package io.linlan.commons.core;
 
 
-import io.linlan.commons.core.abs.IMultiValueMap;
 import io.linlan.commons.core.lang.Assert;
+import io.linlan.commons.core.abs.IMultiValueMap;
 
 import java.io.Serializable;
 import java.util.*;
@@ -29,11 +29,10 @@ import java.util.*;
  * Mainly for internal use within the framework.
  * the CollectionUtils direct from springframework
  *
- * @author <a href="mailto:20400301@qq.com">linlan</a>
  * @author Juergen Hoeller
  * @author Rob Harrop
  * @author Arjen Poutsma
- * Createtime 2017/7/12 15:23
+ * Createtime 2020/7/12 15:23
  *
  * @version 1.0
  * @since 1.0
@@ -82,8 +81,8 @@ public abstract class CollectionUtils {
      * Merge the given array into the given Collection.
      * @param array the array to merge (may be {@code null})
      * @param collection the target Collection to merge the array into
-     * @param <E> E
      */
+    @SuppressWarnings("unchecked")
     public static <E> void mergeArrayIntoCollection(Object array, Collection<E> collection) {
         if (collection == null) {
             throw new IllegalArgumentException("Collection must not be null");
@@ -102,6 +101,7 @@ public abstract class CollectionUtils {
      * @param props the Properties instance to merge (may be {@code null})
      * @param map the target Map to merge the properties into
      */
+    @SuppressWarnings("unchecked")
     public static <K, V> void mergePropertiesIntoMap(Properties props, Map<K, V> map) {
         if (map == null) {
             throw new IllegalArgumentException("Map must not be null");

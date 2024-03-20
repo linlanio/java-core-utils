@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,8 +28,7 @@ import java.util.Map;
  * Filename:ArrayUtils.java
  * Desc:Array utils include empty, null, resize, add, new methods
  *
- * @author <a href="mailto:20400301@qq.com">linlan</a>
- * CreateTime:2017/6/28 8:47 PM
+ * CreateTime:2020/6/28 8:47 PM
  *
  * @version 1.0
  * @since 1.0
@@ -129,7 +128,7 @@ public final class ArrayUtils {
      * @param type type of source array or component type
      * @param source source object
      * @return Object[]
-     * @throws NullPointerException null point exception
+     * @throws NullPointerException
      * @throws IllegalArgumentException if the source is illegal
      */
     public static Object[] cast(Class<?> type, Object source) throws NullPointerException, IllegalArgumentException {
@@ -173,7 +172,7 @@ public final class ArrayUtils {
      * resize the source to a new array with source class component type
      *
      * @param <T> the type of array or component type
-     * @param source source array
+     * @return source source array
      * @param newSize new size
      * @return T new array
      */
@@ -185,7 +184,7 @@ public final class ArrayUtils {
      * resize the source to a new array with new size use input component type
      *
      * @param <T> the type of array or component type
-     * @param source source array
+     * @return source source array
      * @param newSize new size
      * @param componentType component type
      * @return T new array
@@ -346,7 +345,7 @@ public final class ArrayUtils {
      * @param values values array
      * @param <K> Key type
      * @param <V> Value type
-     * @return the result
+     * @return Map<K, V> the result
      */
     public static <K, V> Map<K, V> zip(K[] keys, V[] values) {
         return zip(keys, values, false);
@@ -365,7 +364,7 @@ public final class ArrayUtils {
      * @param isOrder if in order, true is in order
      * @param <K> Key type
      * @param <V> Value type
-     * @return the result
+     * @return Map<K, V> the result
      */
     public static <K, V> Map<K, V> zip(K[] keys, V[] values, boolean isOrder) {
         if (isEmpty(keys) || isEmpty(values)) {
@@ -390,7 +389,7 @@ public final class ArrayUtils {
      *                true return {@link LinkedHashMap}, false return {@link HashMap}
      * @param <K> Key type
      * @param <V> Value type
-     * @return the result HashMap
+     * @return HashMap<K, V> the result HashMap
      */
     public static <K, V> HashMap<K, V> newHashMap(int size, boolean isOrder) {
         int initialCapacity = (int) (size / 0.75);

@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,6 +32,8 @@ import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+
+import static io.linlan.commons.core.abs.CharsetConstants.UTF_8;
 
 /**
  * 文件读取器
@@ -103,7 +105,7 @@ public class FileReader extends FileWrapper {
      * @param file 文件
      */
     public FileReader(File file) {
-        this(file, CharsetConstants.UTF_8);
+        this(file, UTF_8);
     }
 
     /**
@@ -112,7 +114,7 @@ public class FileReader extends FileWrapper {
      * @param filePath 文件路径，相对路径会被转换为相对于ClassPath的路径
      */
     public FileReader(String filePath) {
-        this(filePath, CharsetConstants.UTF_8);
+        this(filePath, UTF_8);
     }
     // ------------------------------------------------------- Constructor end
 

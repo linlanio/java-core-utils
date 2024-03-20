@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,9 +24,8 @@ import java.util.Map;
  * Filename:IMultiValueMap.java
  * Desc:Extension of the {@code Map} interface that stores multiple values.
  *
- * @author <a href="mailto:20400301@qq.com">linlan</a>
  * @author Arjen Poutsma
- * Createtime 2017/7/12 14:30
+ * Createtime 2020/7/12 14:30
  *
  * @version 1.0
  * @since 1.0

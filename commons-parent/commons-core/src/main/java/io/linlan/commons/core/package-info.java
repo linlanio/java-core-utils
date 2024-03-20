@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,8 +20,7 @@
  * the log is the base of commons
  * the log is support for script, db, env, log etc.
  *
- * @author <a href="mailto:20400301@qq.com">linlan</a>
- * CreateTime:2017-07-01 7:53 PM
+ * CreateTime:2020-07-01 7:53 PM
  *
  * @version 1.0
  * @since 1.0

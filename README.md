@@ -7,6 +7,7 @@ JAVA代码核心工具类，包括核心、缓存、系统、脚本处理，数�
 命令行：
 mvn clean install
 
+5     2024-03-20     更新注释和说明部分，为具体应用进行规范化调整
 4     2023-11-26     更新包路径，调整distributionManagement配置方式
                      配置github工程中packages配置，实现发布及使用联通
 3     2023-11-22     调整配置，修改md文件，优化链接，验证两个子包代码
@@ -16,9 +17,9 @@ mvn clean install
 ```
 
 ## 子包简介
-1. commons-parent:公共的工具核心、JSON工具、缓存工具类等子包，版本：2.2
+1. commons-parent:公共的工具核心、JSON工具、缓存工具类等子包，版本：2.3
    [版本更新链接](./commons-parent/README.md)
-2. datas-parent:公共的数据处理核心，多数据源链接等工具类，版本：2.0
+2. datas-parent:公共的数据处理核心，多数据源链接等工具类，版本：2.1
    [版本更新链接](./datas-parent/README.md)
 
 ## 技术路径
@@ -38,7 +39,7 @@ Springboot
       <artifactId>${artifactId}</artifactId>
       <version>${project.version}</version>
       <scope>test</scope>
-   </dependency>`
+   </dependency>
 ```
 2. 直接拷贝打包后的jar包
 
@@ -52,4 +53,17 @@ git config user.email linlanio@qq.com
 git config --global --list
 git config --list
 ```
-4.  新建 Pull Request
+4. 新建 Pull Request
+5. 创建和提交tag
+```
+创建
+git tag -a v4 -m "create new tag v4"
+查看
+git tag
+提交
+git push origin --tags
+删除
+git tag -d v4
+
+```
+6. 其他

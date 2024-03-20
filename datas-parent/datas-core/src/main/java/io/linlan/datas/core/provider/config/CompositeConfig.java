@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,9 +23,8 @@ import java.util.Iterator;
  * Filename:CompositeConfig.java
  * Desc: 复合配置类，对配置组件类进行扩展，增加类型丰富
  *
- * @author linlan of linlan.io
- * @author <a href="mailto:20400301@qq.com">linlan</a>
- * CreateTime:2017/12/20 22:12
+ * @author Linlan
+ * CreateTime:2020/12/20 22:12
  *
  * @version 1.0
  * @since 1.0
