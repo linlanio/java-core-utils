@@ -57,7 +57,7 @@ git config --list
 5. 创建和提交tag
 ```
 创建
-git tag -a v4 -m "create new tag v4"
+git tag -a v5 -m "create new tag v5 mybatis"
 查看
 git tag
 提交
