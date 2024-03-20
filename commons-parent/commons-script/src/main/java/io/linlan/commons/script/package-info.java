@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,8 +18,7 @@
  * package:io.linlan.commons.script
  * Desc:the package to deal with script class and provide utils for project
  * the package include json, xml, properties etc
- * @author <a href="mailto:20400301@qq.com">linlan</a>
- * CreateTime:2017-07-03 8:53 PM
+ * CreateTime:2020-07-03 8:53 PM
  *
  * @version 1.0
  * @since 1.0

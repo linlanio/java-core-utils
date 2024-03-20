@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,8 +15,6 @@
  */
 package io.linlan.commons.db.mybatis;
 
-import com.github.pagehelper.Page;
-
 import java.util.List;
 import java.util.Map;
 
@@ -26,7 +24,6 @@ import java.util.Map;
  * Desc:Need to define and implement the method in annotation or
  * in XML
  *
- * @author <a href="mailto:20400301@qq.com">linlan</a>
  * CreateTime:2017-07-03 1:57 PM
  *
  * @version 1.0
@@ -44,10 +41,10 @@ public interface MybatisBaseDao<T> {
 
     /** get page of entity with input map conditions
      *
-     * @param param the input conditions
+     * @param map the input conditions
      * @return the Page of T
      */
-    Page<T> getPage(Object param);
+    List<T> getPage(Map<String, Object> map);
 
     /** find the entity by id
      *
@@ -55,13 +52,6 @@ public interface MybatisBaseDao<T> {
      * @return T the entity
      */
     T findById(Object id);
-
-    /** get the dto by id
-     *
-     * @param id the id
-     * @return T the dto extend entity
-     */
-    T getById(Object id);
 
     /** save entity of input t
      *
@@ -116,17 +106,18 @@ public interface MybatisBaseDao<T> {
      */
     int delete(Map<String, Object> map);
 
-    /** get the total count
+    /** get the total result
      *
      * @return total count
      */
-    int getCount();
+    int getTotal();
 
-    /** get the result by select conditions
+    /** get the count by select conditions
      *
      * @param map the input select conditions
-     * @return get count
+     * @return count
      */
     int getCount(Map<String, Object> map);
 
 }
+

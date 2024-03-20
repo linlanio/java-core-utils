@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,8 +20,7 @@ package io.linlan.commons.core.abs;
  * Filename:IConsumer.java
  * Desc:the interface of Consumer, to define accept method for map operations
  *
- * @author <a href="mailto:20400301@qq.com">linlan</a>
- * Createtime 2017/7/12 9:08 PM
+ * Createtime 2020/7/12 9:08 PM
  * 
  * @version 1.0
  * @since 1.0

@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,8 +23,7 @@ import java.lang.annotation.*;
  * Desc: Data filter annotation for common use
  * 数据过滤的名称，可设置和指定表名、表别名或拥有者
  *
- * @author <a href="mailto:20400301@qq.com">linlan</a>
- * CreateTime:2017-08-06 10:43 AM
+ * CreateTime:2020-08-06 10:43 AM
  *
  * @version 1.0
  * @since 1.0

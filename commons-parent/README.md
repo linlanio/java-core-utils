@@ -1,6 +1,9 @@
 # commons-parent
 ## Version Graph
 ```
+
+2.3.0       2024-03-20      更新注释和说明部分，为具体应用进行规范化调整
+
 2.2.2       2023-12-11      queryTotal调整为getCount，getPage的返回对象调整为Page，增加getById方法返回DTO对象，入参为Object
 2.2.1       2023-11-26      pom文件的配置调整，增加distributionManagement，删除repository
 2.2.0       2023-11-18  pom文件的配置调整，优化引用关系，规范groupId名称

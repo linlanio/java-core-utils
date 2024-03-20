@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -42,8 +42,7 @@ import java.util.*;
  misrepresented as being the original software.
  3. This notice may not be removed or altered from any source distribution.
  *
- * @author <a href="mailto:20400301@qq.com">linlan</a>
- * CreateTime:2017/08/20 16:56
+ * CreateTime:2020/08/20 16:56
  *
  * @version 1.0
  * @since 1.0
@@ -152,22 +151,22 @@ public class StringComparator implements Comparator<Comparable> {
     }
 
     public static void main(String[] args) {
-//        String[] strings = new String[]{"1-2", "1-02", "1-20", "10-20", "fred", "jane", "img01",
-//                "img2", "img02", "img02a", "img3", "img4", "img 4 else", "img 5", "img05", "img 5",
-//                "img 5 something", "img 6", "img   7", "img100", "img100a", "img120", "img121",
-//                "img02000", "tom", "x2-g8", "x2-y7", "x2-y08", "x8-y8"};
-//
-//        List orig = Arrays.asList(strings);
-//
-//        System.out.println("Original: " + orig);
-//
-//        List scrambled = Arrays.asList(strings);
-//        Collections.shuffle(scrambled);
-//
-//        System.out.println("Scrambled: " + scrambled);
-//
-//        Collections.sort(scrambled, new StringComparator());
-//
-//        System.out.println("Sorted: " + scrambled);
+        String[] strings = new String[]{"1-2", "1-02", "1-20", "10-20", "fred", "jane", "img01",
+                "img2", "img02", "img02a", "img3", "img4", "img 4 else", "img 5", "img05", "img 5",
+                "img 5 something", "img 6", "img   7", "img100", "img100a", "img120", "img121",
+                "img02000", "tom", "x2-g8", "x2-y7", "x2-y08", "x8-y8"};
+
+        List orig = Arrays.asList(strings);
+
+        System.out.println("Original: " + orig);
+
+        List scrambled = Arrays.asList(strings);
+        Collections.shuffle(scrambled);
+
+        System.out.println("Scrambled: " + scrambled);
+
+        Collections.sort(scrambled, new StringComparator());
+
+        System.out.println("Sorted: " + scrambled);
     }
 }

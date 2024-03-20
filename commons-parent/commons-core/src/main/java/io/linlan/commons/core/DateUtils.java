@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,9 +28,8 @@ import java.util.TimeZone;
  * Filename:DateUtils.java
  * Desc:日期时间处理工具类，提供日期格式定义，日期处理方法
  *
- * @author linlan
- * @author <a href="mailto:20400301@qq.com">linlan</a>
- * CreateTime:2017-07-15 6:19 PM
+ * @author Linlan
+ * CreateTime:2020-07-15 6:19 PM
  *
  * @version 1.0
  * @since 1.0
@@ -130,9 +129,8 @@ public class DateUtils {
     }
 
     /**
-     * 获取系统时间
-     * @param date 时间日期对象
-     * @return the string of input date
+     * 获取系统时间<br>
+     * DateUtils.formatDateTime(new Date())<br>
      */
     public static String formatDate(Date date) {
         if (date == null) {
@@ -148,7 +146,8 @@ public class DateUtils {
      *
      * @param source 指定的时间
      * @param format 时间日期格式
-     * @return date object
+     * @return
+     * @throws ParseException
      */
     public static Date formatDate(String source, String format) {
         if (StringUtils.isBlank(format)) {
@@ -165,9 +164,12 @@ public class DateUtils {
 
     /**
      * 得到指定时间的时间日期格式
-     * @param date 指定的时间
-     * @param format 时间日期格式
-     * @return the string of input date
+     *
+     * @param date
+     *            指定的时间
+     * @param format
+     *            时间日期格式
+     * @return
      */
     public static String getFormatDateTime(Date date, String format) {
         DateFormat df = new SimpleDateFormat(format);
@@ -175,10 +177,10 @@ public class DateUtils {
     }
 
     public static void main(String[] args) {
-        String date1 = "2014年7月";
-        String date2 = "2014年07月";
-        String date3 = "2014.08";
-        String date4 = "2014.8";
+        String date1 = "年7月";
+        String date2 = "年07月";
+        String date3 = ".08";
+        String date4 = ".8";
 
         Date d1 = parseDate(date1);
         Date d2 = parseDate(date2);
@@ -191,11 +193,7 @@ public class DateUtils {
         System.out.println(DateUtils.getNowString());
 
     }
-    /**
-     * 通过字符串渲染日期
-     * @param strDate 指定的时间字符串
-     * @return date object
-     */
+
     public static Date parseDate(String strDate) {
         if (strDate == null || "".equals(strDate)) {
             return null;
@@ -211,8 +209,8 @@ public class DateUtils {
 
     /**
      * 将Object显示转换成Date
-     * @param source 输入对象
-     * @return data object
+     * @param source
+     * @return
      */
     public static Date formatObject(Object source){
         Date fmtDate = null;
@@ -227,9 +225,7 @@ public class DateUtils {
     }
 
     /**
-     * 将long类型数字转换成Date
-     * @param num 输入数字
-     * @return the string of input date
+     * 时间戳转换时间
      */
     public static String formatStr(Long num) {
         SimpleDateFormat format = new SimpleDateFormat(yyyyMMddHHmmss);
@@ -237,12 +233,6 @@ public class DateUtils {
         return format.format(time);
     }
 
-    /** 对输入的日期进行队列内字符串格式匹配
-     * @param formats 格式数组
-     * @param strDate 日期字符串
-     * @param i 开始位置
-     * @return 日期对象
-     */
     private static Date marchDatePattern(String[] formats, String strDate, int i) {
         if (formats.length == i) {
             return null;
@@ -270,9 +260,11 @@ public class DateUtils {
     }
 
     /**
-     * 判断是否是闰年
-     * @param date 指定的时间
-     * @return true:是闰年,false:不是闰年
+     * 判断是否是润年
+     *
+     * @param date
+     *            指定的时间
+     * @return true:是润年,false:不是润年
      */
     public static boolean isLeapYear(Date date) {
         Calendar cal = Calendar.getInstance();
@@ -281,9 +273,11 @@ public class DateUtils {
     }
 
     /**
-     * 判断是否是闰年
-     * @param year 指定的年数字
-     * @return true:是闰年,false:不是闰年
+     * 判断是否是润年
+     *
+     * @param date
+     *            指定的年
+     * @return true:是润年,false:不是润年
      */
     public static boolean isLeapYear(int year) {
         GregorianCalendar calendar = new GregorianCalendar();
@@ -293,7 +287,8 @@ public class DateUtils {
     /**
      * 判断指定的时间是否是今天
      *
-     * @param date 指定的时间
+     * @param date
+     *            指定的时间
      * @return true:是今天,false:非今天
      */
     public static boolean isInToday(Date date) {
@@ -316,8 +311,10 @@ public class DateUtils {
     /**
      * 判断两时间是否是同一天
      *
-     * @param from 第一个时间点
-     * @param to 第二个时间点
+     * @param from
+     *            第一个时间点
+     * @param to
+     *            第二个时间点
      * @return true:是同一天,false:非同一天
      */
     public static boolean isSameDay(Date from, Date to) {
@@ -332,7 +329,8 @@ public class DateUtils {
     /**
      * 求出指定的时间那天是星期几
      *
-     * @param date 指定的时间
+     * @param date
+     *            指定的时间
      * @return 星期X
      */
     public static String getWeekString(Date date) {
@@ -342,7 +340,8 @@ public class DateUtils {
     /**
      * 求出指定时间那天是星期几
      *
-     * @param date 指定的时间
+     * @param date
+     *            指定的时间
      * @return 1-7
      */
     public static int getWeek(Date date) {
@@ -356,7 +355,8 @@ public class DateUtils {
     /**
      * 取得指定时间离现在是多少时间以前，如：3秒前,2小时前等 注意：此计算方法不是精确的
      *
-     * @param date 已有的指定时间
+     * @param date
+     *            已有的指定时间
      * @return 时间段描述
      */
     public static String getAgoTimeString(Date date) {
@@ -409,7 +409,8 @@ public class DateUtils {
     /**
      * 判断指定时间是否是周末
      *
-     * @param date 指定的时间
+     * @param date
+     *            指定的时间
      * @return true:是周末,false:非周末
      */
     public static boolean isWeeks(Date date) {
@@ -466,7 +467,8 @@ public class DateUtils {
     /**
      * 取得本周的开始日期
      *
-     * @param format 时间的格式
+     * @param format
+     *            时间的格式
      * @return 指定格式的本周最开始时间
      */
     public static String getThisWeekBeginTimeString(String format) {
@@ -476,7 +478,7 @@ public class DateUtils {
 
     /**
      * 得到某天最开始时间
-     * @param from 时间
+     *
      * @return 最开始时间
      */
     public static Date getDateBeginTime(Date from) {
@@ -488,9 +490,9 @@ public class DateUtils {
     }
 
     /**
-     * 得到某天最后的时间
-     * @param from 时间
-     * @return 最后的时间
+     * 得到某天最开始时间
+     *
+     * @return 最开始时间
      */
     public static Date getDateEndTime(Date from) {
         Calendar cal = Calendar.getInstance();
@@ -567,9 +569,9 @@ public class DateUtils {
     /**
      * 取得两时间相差的分钟数
      *
-     * @param from 开始时间
-     * @param to 结束时间
-     * @return 相差分钟数
+     * @param from
+     * @param to
+     * @return
      */
     public static long getBetweenMinute(Date from, Date to){
         long minute = 0;
@@ -584,9 +586,9 @@ public class DateUtils {
 
     /**
      * 获取日期相差月份
-     * @param beginDate 开始时间
-     * @param endDate 结束时间
-     * @return 相差月份
+     * @param beginDate
+     * @param endDate
+     * @return
      */
     public static int getDiffMonth(Date beginDate,Date endDate) {
         Calendar calbegin = Calendar.getInstance();
@@ -600,12 +602,13 @@ public class DateUtils {
         //获得合同结束日期于开始的相差月份
         return checkmonth;
     }
-
     /**
      * 取得在指定时间上加减days天后的时间
      *
-     * @param date 指定的时间
-     * @param hours 小时数,正为加，负为减
+     * @param date
+     *            指定的时间
+     * @param hours
+     *            小时数,正为加，负为减
      * @return 在指定时间上加减  hours 小时 后的时间
      */
     public static Date addHours(Date date, int hours) {
@@ -618,8 +621,10 @@ public class DateUtils {
     /**
      * 取得在指定时间上加减days天后的时间
      *
-     * @param date 指定的时间
-     * @param days 天数,正为加，负为减
+     * @param date
+     *            指定的时间
+     * @param days
+     *            天数,正为加，负为减
      * @return 在指定时间上加减days天后的时间
      */
     public static Date addDays(Date date, int days) {
@@ -634,8 +639,10 @@ public class DateUtils {
     /**
      * 取得在指定时间上加减months月后的时间
      *
-     * @param date 指定时间
-     * @param months 月数，正为加，负为减
+     * @param date
+     *            指定时间
+     * @param months
+     *            月数，正为加，负为减
      * @return 在指定时间上加减months月后的时间
      */
     public static Date addMonths(Date date, int months) {
@@ -650,8 +657,10 @@ public class DateUtils {
     /**
      * 取得在指定时间上加减years年后的时间
      *
-     * @param date 指定时间
-     * @param years 年数，正为加，负为减
+     * @param date
+     *            指定时间
+     * @param years
+     *            年数，正为加，负为减
      * @return 在指定时间上加减years年后的时间
      */
     public static Date addYears(Date date, int years) {
@@ -663,6 +672,7 @@ public class DateUtils {
         return time;
     }
 
+    @SuppressWarnings({ "unused", "static-access" })
     public static int getWEEK_OF_YEAR() {
         SimpleDateFormat date_format = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
         // 获取calendar实例;
@@ -671,7 +681,6 @@ public class DateUtils {
         if (calendar instanceof GregorianCalendar) {
             // System.out.println("属于GregorianCalendar类的实例!");
         }
-        // 设置当前时间为:2011-07-24 11:06:00
         calendar.setTime(new Date());
         int year = calendar.get(Calendar.YEAR); // 获取年;
         int month = calendar.get(Calendar.MONTH); // 获取月;
@@ -699,8 +708,7 @@ public class DateUtils {
     }
 
     /**
-     * 根据身份证获取Date类型的出生日期.
-     * @param idcard 18位身份证号码
+     * @author 刘俊 根据身份证获取Date类型的出生日期.
      * @return 成功Date, 转换过程出现异常null
      */
     public static Date getDateByIdcard(String idcard) {
@@ -714,9 +722,7 @@ public class DateUtils {
     }
 
     /**
-     * 通过身份证获取年龄. 精确到月
-     * @param idcard 18位身份证号码
-     * @return 精确到月的年龄
+     * @author 刘俊 通过身份证获取年龄. 精确到月
      */
     public static int getAgeByIdcard(String idcard) {
         int age = 0;
@@ -741,9 +747,7 @@ public class DateUtils {
     }
 
     /**
-     * 通过身份证获取出生年
-     * @param idcard 18位身份证号码
-     * @return 年
+     * @author 刘俊 通过身份证获取出生年
      */
     public static String getYearByIdcard(String idcard) {
         if (idcard.length() == 18) {
@@ -754,9 +758,9 @@ public class DateUtils {
     }
 
     /**
-     * 通过身份证获取出生月
-     * @param idcard 18位身份证号码
-     * @return 出生月
+     * @author 刘俊 通过身份证获取出生月
+     * @param idcard
+     * @return
      */
     public static String getMonthByIdcard(String idcard) {
         if (idcard.length() == 18) {
@@ -767,9 +771,7 @@ public class DateUtils {
     }
 
     /**
-     * 通过身份证获取出生日
-     * @param idcard 18位身份证号码
-     * @return 出生日
+     * @author 刘俊 通过身份证获取出生日
      */
     public static String getDayByIdcard(String idcard) {
         if (idcard.length() == 18) {
@@ -780,9 +782,10 @@ public class DateUtils {
     }
 
     /**
-     * 获取当前年. 格式: YYYY
+     * 获取当前月. 格式: YYYY
      *
-     * @return 当前年
+     * @author 刘俊 年11月12日
+     * @return
      */
     public static int getCurrentYear() {
         return Integer.parseInt(DateUtils.getFormatDateTime(new Date(), DateUtils.yyyy));
@@ -790,17 +793,16 @@ public class DateUtils {
 
     /**
      * 获取当前月
-     * @return 当前月
+     *
+     * @author 刘俊 年11月12日
+     * @return
      */
     public static int getCurrentMonth() {
         return Integer.parseInt(DateUtils.getFormatDateTime(new Date(), DateUtils.MM));
     }
 
     /**
-     * 得到某一天延后天数的新日期
-     * @param date 时间
-     * @param days 当前时间前后的天数
-     * @return data object
+     * 得到某一天的日期，今天，明天，前一天，后一天
      */
     public static Date getDay(Date date, Object days) {
         int daysInt = Integer.parseInt(days.toString());
@@ -811,11 +813,7 @@ public class DateUtils {
     }
 
     /**
-     * 得到某一天的日期，在当前时间上加、减天数
-     * @param strDate 时间字符串
-     * @param days 当前时间前后的天数
-     * @param format 格式
-     * @return data string
+     * 得到某一天的日期，0今天，1明天，-1前一天，-2后一天
      */
     public static String getDay(String strDate, Object days, String format) {
         SimpleDateFormat sdf = new SimpleDateFormat(format);
@@ -828,11 +826,7 @@ public class DateUtils {
     }
 
     /**
-     * 得到某一天的日期，在当前时间上加、减天数
-     * @param date 时间
-     * @param days 当前时间前后的天数
-     * @param format 格式
-     * @return data string
+     * 得到某一天的日期，0今天，1明天，-1前一天，-2后一天
      */
     public static String getDay(Date date, Object days, String format) {
         Date tdate = getDay(date, days);
@@ -841,20 +835,14 @@ public class DateUtils {
     }
 
     /**
-     * 在当前时间上加、减天数后的新日期
-     * @param days 当前时间前后的天数
-     * @param format 格式
-     * @return data string
+     * 得到某一天的日期，0今天，1明天，-1前一天，-2后一天
      */
     public static String getDay(Object days, String format) {
         return getDay(new Date(), days, format);
     }
 
-
     /**
      * 获取某个月内的全部天数
-     * @param date 日期格式
-     * @return 当月天数
      */
     public static int[] getMonthDays(String date) {
         Calendar calendar = Calendar.getInstance();

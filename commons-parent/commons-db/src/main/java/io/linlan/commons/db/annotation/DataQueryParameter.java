@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,8 +26,7 @@ import java.lang.annotation.Target;
  * Desc: Query parameter annotation for common use
  * 数据查询可以输入条件或参数，包括显示方式、控件等参数
  *
- * @author <a href="mailto:20400301@qq.com">linlan</a>
- * CreateTime:2017-08-07 9:32 PM
+ * CreateTime:2020-08-07 9:32 PM
  *
  * @version 1.0
  * @since 1.0

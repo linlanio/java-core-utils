@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,7 +30,7 @@ package io.linlan.commons.core;
 public class SnowFlake {
 
     // ==============================Fields===========================================
-    /** 开始时间截 (2015-01-01) */
+    /** 开始时间截 */
     private final long twepoch = 1420041600000L;
 
     /** 机器id所占的位数 */

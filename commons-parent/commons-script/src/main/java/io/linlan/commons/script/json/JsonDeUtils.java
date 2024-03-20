@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Howai authors.
+ * Copyright 2020-2023 the original author or Howai authors.
  * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,8 +31,7 @@ import java.util.List;
  * Desc:the JSON utils from GSON in script operations
  * this utils include toBean, decode, encode methods
  *
- * @author <a href="mailto:20400301@qq.com">linlan</a>
- * CreateTime:2017-07-07 9:35 PM
+ * CreateTime:2020-07-07 9:35 PM
  *
  * @version 1.0
  * @since 1.0

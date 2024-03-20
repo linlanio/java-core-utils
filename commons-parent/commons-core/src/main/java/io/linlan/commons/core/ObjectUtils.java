@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,14 +28,13 @@ import java.util.Map;
  * <p>Mainly for internal use within the framework.
  * <p>Thanks to Alex Ruiz for contributing several enhancements to this class!
  *
- * @author <a href="mailto:20400301@qq.com">linlan</a>
  * @author Juergen Hoeller
  * @author Keith Donald
  * @author Rod Johnson
  * @author Rob Harrop
  * @author Chris Beams
  * @author Sam Brannen
- * Createtime 2017/7/12 14:31
+ * Createtime 2020/7/12 14:31
  *
  * @version 1.0
  * @since 1.0

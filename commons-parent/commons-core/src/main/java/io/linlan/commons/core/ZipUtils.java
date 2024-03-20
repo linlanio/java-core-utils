@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -41,8 +41,7 @@ import java.util.zip.ZipOutputStream;
  * Filename:ZipUtils.java
  * Desc:Zip utils include zip, unzip, gzip methods
  *
- * @author <a href="mailto:20400301@qq.com">linlan</a>
- * Createtime 2017/7/11 9:58 PM
+ * Createtime 2020/7/11 9:58 PM
  * 
  * @version 1.0
  * @since 1.0

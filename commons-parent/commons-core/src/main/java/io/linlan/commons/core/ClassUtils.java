@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -43,12 +43,11 @@ import java.util.Set;
  * Desc:Class utils is to deal with class file
  * the ClassUtils direct from springframework
  *
- * @author <a href="mailto:20400301@qq.com">linlan</a>
  * @author Juergen Hoeller
  * @author Keith Donald
  * @author Rob Harrop
  * @author Sam Brannen
- * Createtime 2017/7/12 14:37
+ * Createtime 2020/7/12 14:37
  *
  * @version 1.0
  * @since 1.0
@@ -375,7 +374,6 @@ public abstract class ClassUtils {
      * i.e. whether it is loaded by the given ClassLoader or a parent of it.
      * @param clazz the class to analyze
      * @param classLoader the ClassLoader to potentially cache metadata in
-     * @return boolean value
      */
     public static boolean isCacheSafe(Class<?> clazz, ClassLoader classLoader) {
         Assert.notNull(clazz, "Class must not be null");
@@ -561,7 +559,6 @@ public abstract class ClassUtils {
      * Check whether the given class matches the user-specified type name.
      * @param clazz the class to check
      * @param typeName the type name to match
-     * @return boolean value
      */
     public static boolean matchesTypeName(Class<?> clazz, String typeName) {
         return (typeName != null &&
@@ -588,10 +585,9 @@ public abstract class ClassUtils {
      * <p>Essentially translates {@code NoSuchMethodException} to {@code null}.
      * @param clazz the clazz to analyze
      * @param paramTypes the parameter types of the method
-     * @param <T> 泛型T
      * @return the constructor, or {@code null} if not found
+     * @see Class#getConstructor
      */
-
     public static <T> Constructor<T> getConstructorIfAvailable(Class<T> clazz, Class<?>... paramTypes) {
         Assert.notNull(clazz, "Class must not be null");
         try {
@@ -961,6 +957,7 @@ public abstract class ClassUtils {
      * slash ('/') to the return value). Built by taking the package of the specified
      * class file, converting all dots ('.') to slashes ('/'), adding a trailing slash
      * if necessary, and concatenating the specified resource name to this.
+     * <br/>
      * @param clazz the Class whose package will be used as the base
      * @param resourceName the resource name to append. A leading slash is optional.
      * @return the built-up resource path
@@ -1188,7 +1185,7 @@ public abstract class ClassUtils {
      * Check whether the given class is visible in the given ClassLoader.
      * @param clazz the class to check (typically an interface)
      * @param classLoader the ClassLoader to check against (may be {@code null},
-     * @return in which case this method will always return {@code true})
+     * in which case this method will always return {@code true})
      */
     public static boolean isVisible(Class<?> clazz, ClassLoader classLoader) {
         if (classLoader == null) {
@@ -1208,7 +1205,6 @@ public abstract class ClassUtils {
     /**
      * Check whether the given object is a CGLIB proxy.
      * @param object the object to check
-     * @return boolean
      */
     public static boolean isCglibProxy(Object object) {
         return isCglibProxyClass(object.getClass());
@@ -1217,7 +1213,6 @@ public abstract class ClassUtils {
     /**
      * Check whether the specified class is a CGLIB-generated class.
      * @param clazz the class to check
-     * @return boolean
      */
     public static boolean isCglibProxyClass(Class<?> clazz) {
         return (clazz != null && isCglibProxyClassName(clazz.getName()));
@@ -1226,7 +1221,6 @@ public abstract class ClassUtils {
     /**
      * Check whether the specified class name is a CGLIB-generated class.
      * @param className the class name to check
-     * @return boolean
      */
     public static boolean isCglibProxyClassName(String className) {
         return (className != null && className.contains(CGLIB_CLASS_SEPARATOR));
@@ -1237,7 +1231,7 @@ public abstract class ClassUtils {
      * new instance of ClassUtils with input clazz and params
      * @param clazz source clazz
      * @param params params for constructor
-     * @param T 泛型T
+     * @param <T> the type of Object
      * @return T Object
      */
     public static <T> T newInstance(Class<T> clazz, Object... params) {
@@ -1261,8 +1255,9 @@ public abstract class ClassUtils {
         }
     }
 
+
     /**
-     * get classes of class with input objects
+     * get classes of class<> with input objects
      *
      * @param objects input objects of params for constructor
      * @return Class[]

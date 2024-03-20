@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,6 +17,7 @@ package io.linlan.datas.core.utils;
 
 import io.linlan.commons.core.StringUtils;
 import io.linlan.datas.core.provider.config.*;
+import io.linlan.datas.core.provider.config.*;
 
 import java.util.ArrayList;
 import java.util.StringJoiner;
@@ -30,9 +31,8 @@ import java.util.stream.Stream;
  * Filename:SqlHelper.java
  * Desc: SQL 查询帮助类
  *
- * @author linlan of linlan.io
- * @author <a href="mailto:20400301@qq.com">linlan</a>
- * CreateTime:2017/12/20 22:12
+ * @author Linlan
+ * CreateTime:2020/12/20 22:12
  *
  * @version 1.0
  * @since 1.0
@@ -102,7 +102,7 @@ public class SqlHelper {
         }
         String fsql = null;
         if (hasSubQuery) {
-            fsql = "\nSELECT %s \n FROM (\n%s\n) howide_view \n %s \n %s";
+            fsql = "\nSELECT %s \n FROM (\n%s\n) howai_view \n %s \n %s";
         } else {
             fsql = "\nSELECT %s \n FROM %s \n %s \n %s";
         }

@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -37,8 +37,7 @@ import javax.xml.ws.Holder;
  * Desc:Regex utils include get, extract, remove, valid methods
  * the defined regex expression
  *
- * @author <a href="mailto:20400301@qq.com">linlan</a>
- * CreateTime:2017-07-11 10:56 PM
+ * CreateTime:2020-07-11 10:56 PM
  *
  * @version 1.0
  * @since 1.0
@@ -101,9 +100,7 @@ public final class RegexUtils extends RegexConstants {
      * with input regex by input template, $1 means group1
      * Example:<br>
      * regex:(.*?)年(.*?)月
-     * content:2017年7月
      * template:$1-$2
-     * return:2017-7
      *
      * @param regex the regex to match
      * @param content the matched source content
@@ -125,9 +122,7 @@ public final class RegexUtils extends RegexConstants {
      * with input pattern by input template, $1 means group1
      * Example:<br>
      * pattern:the Pattern (.*?)年(.*?)月
-     * content:2017年7月
      * template:$1-$2
-     * return:2017-7
      *
      * @param pattern the Pattern to match {@link Pattern}
      * @param content the matched source content
@@ -178,10 +173,8 @@ public final class RegexUtils extends RegexConstants {
      * get the match string of source content
      * with input regex by input template, $1 means group1
      * Example:<br>
-     * content:2017年7月
      * pattern:(.*?)年(.*?)月
      * template:$1-$2
-     * return:2017-7
      *
      * @param regex the regex to match
      * @param contentHolder the matched Holder, the source will match by template
@@ -202,10 +195,8 @@ public final class RegexUtils extends RegexConstants {
      * get the match string of source content with input regex by input template
      * with latter part without the pre string, $1 means group1
      * Example:<br>
-     * content:2017年7月
      * pattern:(.*?)年(.*?)月
      * template:$1-$2
-     * return:2017-7
      *
      * @param pattern the Pattern to match {@link Pattern}
      * @param contentHolder the matched Holder, the source will match by template

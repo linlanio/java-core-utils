@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,8 +28,7 @@ import java.util.regex.Pattern;
  * Filename:HtmlUtils.java
  * Desc:Html utils include handleUrl, txt2Html, textCut etc.
  *
- * @author <a href="mailto:20400301@qq.com">linlan</a>
- * Createtime 2017/6/23 8:26 PM
+ * Createtime 2020/6/23 8:26 PM
  * 
  * @version 1.0
  * @since 1.0

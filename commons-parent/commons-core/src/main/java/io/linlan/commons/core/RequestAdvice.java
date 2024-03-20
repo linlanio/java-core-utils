@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,8 +20,11 @@ import java.io.Serializable;
 /**
  *
  * RequestAdvice视图域:请求页面BODY包装类
- * @author linlan
+ * @Description <br>
+ * <br>
+ * @author Linlan
  * CreateTime 2023-09-16 10:39:20<br>
+ * <br>
  * @version 1.0<br>
  * @since 1.0<br>
  *

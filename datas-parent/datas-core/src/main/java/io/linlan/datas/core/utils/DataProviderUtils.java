@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,10 +15,10 @@
  */
 package io.linlan.datas.core.utils;
 
+import io.linlan.datas.core.provider.config.AggConfig;
 import io.linlan.datas.core.provider.config.DimensionConfig;
 import io.linlan.datas.core.provider.result.AggregateResult;
 import io.linlan.datas.core.provider.result.ColumnIndex;
-import io.linlan.datas.core.provider.config.AggConfig;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -30,9 +30,8 @@ import java.util.stream.Stream;
  * Filename:DataPrivoderUtils.java
  * Desc: 数据源公共方法类
  *
- * @author linlan of linlan.io
- * @author <a href="mailto:20400301@qq.com">linlan</a>
- * CreateTime:2017/12/20 22:12
+ * @author Linlan
+ * CreateTime:2020/12/20 22:12
  *
  * @version 1.0
  * @since 1.0

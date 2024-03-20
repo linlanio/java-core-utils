@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,8 +22,7 @@ package io.linlan.commons.core.io.file;
  * it can replace array, so the performance is high
  * it provide to OutputStream do operations.
  *
- * @author <a href="mailto:20400301@qq.com">linlan</a>
- * Createtime 2017/7/12 11:46 PM
+ * Createtime 2020/7/12 11:46 PM
  * 
  * @version 1.0
  * @since 1.0
@@ -74,10 +73,8 @@ public class FastByteBuffer {
         this.minLength = DEFAULT_BUFFER_SIZE;
     }
 
-
     /**
      * constructor of self to set minLength with input size
-     * @param size 长度
      */
     public FastByteBuffer(int size) {
         this.minLength = Math.abs(size);

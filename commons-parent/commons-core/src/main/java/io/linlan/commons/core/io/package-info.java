@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,8 +19,7 @@
  * Desc:the package to provide input output and file utils.
  * All the method provide to commons group
  *
- * @author <a href="mailto:20400301@qq.com">linlan</a>
- * CreateTime:2017-07-10 8:59 PM
+ * CreateTime:2020-07-10 8:59 PM
  *
  * @version 1.0
  * @since 1.0

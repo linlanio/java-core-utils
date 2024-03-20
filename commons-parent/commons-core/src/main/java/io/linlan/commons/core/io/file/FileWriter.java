@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,10 +18,10 @@ package io.linlan.commons.core.io.file;
 
 import com.sun.org.apache.xml.internal.serialize.LineSeparator;
 import io.linlan.commons.core.CharsetUtils;
+import io.linlan.commons.core.lang.Assert;
 import io.linlan.commons.core.io.FileUtils;
 import io.linlan.commons.core.io.IORuntimeException;
 import io.linlan.commons.core.io.IoUtils;
-import io.linlan.commons.core.lang.Assert;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -39,8 +39,7 @@ import java.util.Collection;
  * Filename:FileWriter.java
  * Desc: FileWriter to write from string, stream, etc.
  *
- * @author <a href="mailto:20400301@qq.com">linlan</a>
- * CreateTime:2017-08-25 10:47 PM
+ * CreateTime:2020-08-25 10:47 PM
  *
  * @version 1.0
  * @since 1.0
@@ -184,14 +183,14 @@ public class FileWriter extends FileWrapper {
     public <T> File writeLines(Collection<T> list, boolean isAppend) throws IORuntimeException {
         return writeLines(list, null, isAppend);
     }
-
+    
     /**
      * 将列表写入文件
-     * @param list 列表
-     * @param lineSeparator 行分隔符
-     * @param isAppend 是否追加
+     * 
      * @param <T> 集合元素类型
-     * @return File 文件对象
+     * @param list 列表
+     * @param isAppend 是否追加
+     * @return File
      * @throws IORuntimeException IO异常
      * @since 3.1.0
      */

@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -34,8 +34,7 @@ import java.io.InputStream;
  * possible BOM bytes InputStreamReader in; if (enc == null) in = new
  * InputStreamReader(uin); else in = new InputStreamReader(uin, enc);
  *
- * @author <a href="mailto:20400301@qq.com">linlan</a>
- * CreateTime:2017-07-12 10:31 PM
+ * CreateTime:2020-07-12 10:31 PM
  *
  * @version 1.0
  * @since 1.0
@@ -66,7 +65,6 @@ public class UnicodeInputStream extends InputStream {
 
     /**
      * constructor of self with in, use default charset
-     * @param in the input
      */
     public UnicodeInputStream(InputStream in) {
         internalIn = new PushbackInputStream(in, BOM_SIZE);
@@ -74,9 +72,7 @@ public class UnicodeInputStream extends InputStream {
     }
 
     /**
-     * constructor of self with in, charset
-     * @param in the input
-     * @param defEncoding default encoding utf-8
+     * constructor of self with in, defCharset
      */
     public UnicodeInputStream(InputStream in, String defEncoding) {
         internalIn = new PushbackInputStream(in, BOM_SIZE);
@@ -112,7 +108,6 @@ public class UnicodeInputStream extends InputStream {
     /**
      * Read-ahead four bytes and check for BOM marks. Extra bytes are unread
      * back to the stream, only BOM bytes are skipped.
-     * @throws IOException IO异常
      */
     protected void init() throws IOException {
         if (isInitialed)

@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,8 +28,7 @@ import java.util.regex.Pattern;
  * Filename:FilePathUtils.java
  * Desc:上传对象保存为文件的工具类
  *
- * @author <a href="mailto:20400301@qq.com">linlan</a>
- * CreateTime:2017/6/19 14:37
+ * CreateTime:2020/6/19 14:37
  *
  * @version 1.0
  * @since 1.0
@@ -334,7 +333,9 @@ public class FilePathUtils {
      */
     public static void main(String[] args) {
         System.out.println(genFilename("gif", 0));
-        System.out.println(getPathOfDay("/linlan", "gif"));
+        System.out.println(getPathOfDay("/howai", "gif"));
+        System.out.println(getPathOfMonth("/linlan", "jpg"));
+        System.out.println(getPathNoFolder("/cdn", "doc"));
 
     }
 

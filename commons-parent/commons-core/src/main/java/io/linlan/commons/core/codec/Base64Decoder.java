@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,9 +15,9 @@
  */
 package io.linlan.commons.core.codec;
 
-import io.linlan.commons.core.StringUtils;
 import io.linlan.commons.core.ArrayUtils;
 import io.linlan.commons.core.CharsetUtils;
+import io.linlan.commons.core.StringUtils;
 
 import java.nio.charset.Charset;
 
@@ -26,7 +26,6 @@ import java.nio.charset.Charset;
  * Filename:Base64Decoder.java
  * Desc:Base64解码实现
  *
- * @author <a href="mailto:20400301@qq.com">linlan</a>
  * CreateTime:12/12/21 3:26 PM
  *
  * @version 1.0
