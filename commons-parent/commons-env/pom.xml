@@ -6,7 +6,7 @@
     <groupId>io.linlan.tools</groupId>
     <artifactId>commons-env</artifactId>
     <packaging>jar</packaging>
-    <version>${linlan.utils.version}</version>
+    <version>2.3.2</version>
     <name>commons-env</name>
 
     <properties>
@@ -16,7 +16,6 @@
         <maven.version>3.1.0</maven.version>
         <maven.compile.version>3.7.0</maven.compile.version>
         <mybatis.version>3.4.4</mybatis.version>
-        <linlan.utils.version>2.3.1</linlan.utils.version>
     </properties>
 
     <dependencies>
@@ -26,11 +25,13 @@
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
+
         <dependency>
             <groupId>io.linlan.tools</groupId>
             <artifactId>commons-core</artifactId>
-            <version>${linlan.utils.version}</version>
+            <version>2.3.2</version>
         </dependency>
+
     </dependencies>
 
     <build>
