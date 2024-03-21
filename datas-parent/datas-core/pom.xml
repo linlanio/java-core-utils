@@ -6,7 +6,7 @@
     <groupId>io.linlan.tools</groupId>
     <artifactId>datas-core</artifactId>
     <packaging>jar</packaging>
-    <version>${linlan.tools.datas.version}</version>
+    <version>${linlan.utils.versionn}</version>
     <name>datas-core</name>
 
     <properties>
@@ -17,8 +17,7 @@
         <maven.compile.version>3.7.0</maven.compile.version>
         <mybatis.version>3.4.4</mybatis.version>
         <spring.version>5.0.4.RELEASE</spring.version>
-        <linlan.tools.commons.version>2.3.0</linlan.tools.commons.version>
-        <linlan.tools.datas.version>2.1.0</linlan.tools.datas.version>
+        <linlan.utils.version>2.3.1</linlan.utils.version>
     </properties>
 
     <dependencies>
@@ -51,22 +50,22 @@
         <dependency>
             <groupId>io.linlan.tools</groupId>
             <artifactId>commons-core</artifactId>
-            <version>${linlan.tools.commons.version}</version>
+            <version>${linlan.utils.version}</version>
         </dependency>
         <dependency>
             <groupId>io.linlan.tools</groupId>
             <artifactId>commons-db</artifactId>
-            <version>${linlan.tools.commons.version}</version>
+            <version>${linlan.utils.version}</version>
         </dependency>
         <dependency>
             <groupId>io.linlan.tools</groupId>
             <artifactId>commons-script</artifactId>
-            <version>${linlan.tools.commons.version}</version>
+            <version>${linlan.utils.version}</version>
         </dependency>
         <dependency>
             <groupId>io.linlan.tools</groupId>
             <artifactId>commons-cache</artifactId>
-            <version>${linlan.tools.commons.version}</version>
+            <version>${linlan.utils.version}</version>
         </dependency>
         <dependency>
             <groupId>org.reflections</groupId>

@@ -6,7 +6,7 @@
     <groupId>io.linlan.tools</groupId>
     <artifactId>commons-db</artifactId>
     <packaging>jar</packaging>
-    <version>${linlan.tools.commons.version}</version>
+    <version>${linlan.utils.version}</version>
     <name>commons-db</name>
 
     <properties>
@@ -18,7 +18,7 @@
         <mybatis.version>3.4.4</mybatis.version>
         <mybatis.version>3.4.4</mybatis.version>
         <github.pagehelper.version>5.2.0</github.pagehelper.version>
-        <linlan.tools.commons.version>2.3.0</linlan.tools.commons.version>
+        <linlan.utils.version>2.3.1</linlan.utils.version>
     </properties>
 
     <dependencies>
@@ -31,7 +31,7 @@
         <dependency>
             <groupId>io.linlan.tools</groupId>
             <artifactId>commons-core</artifactId>
-            <version>${linlan.tools.commons.version}</version>
+            <version>${linlan.utils.version}</version>
         </dependency>
         <dependency>
             <groupId>org.mybatis</groupId>
