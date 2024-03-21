@@ -1,10 +1,14 @@
 # linlan-tools
 ## Description
-tools package，include third utils, upgrade of open source utils
+Java code core tool class, including general tool methods such as core, cache, system, script processing, data processing, etc
 
 ## Sub packages introduce
-1. commons-parent: core, cache, log, script etc. version: 2.1.
-2. datas-parent: data, datasource, provider etc. version: 2.0.
+1. Common core: A common tool core sub package
+2. commons db: Public database resource class subpackage
+3. commons script: Public JSON tool class subpackage
+4. commons cache: Public caching tool class subpackage
+5. commons evn: Public environment tool class subpackage
+6. Data parent: Public data processing core, tool class subpackages such as multiple data source links, etc
 
 ## Technical Guidelines
 ### Software Architecture

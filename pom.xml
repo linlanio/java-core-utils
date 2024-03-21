@@ -7,20 +7,20 @@
     <groupId>io.linlan.utils</groupId>
     <artifactId>java-core-utils</artifactId>
     <packaging>pom</packaging>
-    <version>2.3.2</version>
+    <version>2.4.0</version>
     <name>java-core-utils</name>
     <description>
-        The LINLAN Technology provides service for persons or enterprises in software projects.
-        The LINLAN is compose of how and add, it means how to add, how+, how plus, how to support everyone.
-        The LINLAN is a parent pom for all the sub open source projects to inherit.
-        The LINLAN defines all artifact's environment, tools, authors, social contacts and other things.
-        Thanks for your attention.
-        Stay Hungry! Stay Foolish!
+        The commons uitls include core, cache, log, script etc, for all the projects to use.
+        The data utils include JdbcUtils, SolrUtils, ElasticUtils, Echarts utils.
     </description>
 
     <modules>
-        <module>commons-parent</module>
-        <module>datas-parent</module>
+        <module>commons-core</module>
+        <module>commons-cache</module>
+        <module>commons-db</module>
+        <module>commons-env</module>
+        <module>commons-script</module>
+        <module>datas-core</module>
     </modules>
 
 
