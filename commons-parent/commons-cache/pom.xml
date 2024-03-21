@@ -6,7 +6,7 @@
     <groupId>io.linlan.tools</groupId>
     <artifactId>commons-cache</artifactId>
     <packaging>jar</packaging>
-    <version>${linlan.tools.commons.version}</version>
+    <version>${linlan.utils.version}</version>
     <name>commons-cache</name>
 
     <properties>
@@ -19,7 +19,7 @@
         <caucho.hessian.version>4.0.38</caucho.hessian.version>
         <ehcache.version>3.2.0</ehcache.version>
         <spring.data.redis.version>2.0.5.RELEASE</spring.data.redis.version>
-        <linlan.tools.commons.version>2.3.0</linlan.tools.commons.version>
+        <linlan.utils.version>2.3.1</linlan.utils.version>
     </properties>
 
     <dependencies>
@@ -32,7 +32,7 @@
         <dependency>
             <groupId>io.linlan.tools</groupId>
             <artifactId>commons-core</artifactId>
-            <version>${linlan.tools.commons.version}</version>
+            <version>${linlan.utils.version}</version>
         </dependency>
         <dependency>
             <groupId>com.caucho</groupId>

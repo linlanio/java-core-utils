@@ -6,7 +6,7 @@
     <groupId>io.linlan.tools</groupId>
     <artifactId>commons-script</artifactId>
     <packaging>jar</packaging>
-    <version>${linlan.tools.commons.version}</version>
+    <version>${linlan.utils.version}</version>
     <name>commons-script</name>
 
     <properties>
@@ -18,7 +18,7 @@
         <mybatis.version>3.4.4</mybatis.version>
         <fasterxml.jackson.version>2.9.4</fasterxml.jackson.version>
         <fastjson.version>1.2.83</fastjson.version>
-        <linlan.tools.commons.version>2.3.0</linlan.tools.commons.version>
+        <linlan.utils.version>2.3.1</linlan.utils.version>
     </properties>
 
     <dependencies>
@@ -31,7 +31,7 @@
         <dependency>
             <groupId>io.linlan.tools</groupId>
             <artifactId>commons-core</artifactId>
-            <version>${linlan.tools.commons.version}</version>
+            <version>${linlan.utils.version}</version>
         </dependency>
         <dependency>
             <groupId>com.alibaba</groupId>

@@ -1,6 +1,8 @@
 # datas-parent
 ## Version Graph
 ```
+2.3.1     2024-03-21     将全部的版本统一
+
 2.1.0     2024-03-20        更新注释和说明部分，为具体应用进行规范化调整
 
 2.0.0       2023-11-26      pom文件的配置调整，增加distributionManagement，删除repository
