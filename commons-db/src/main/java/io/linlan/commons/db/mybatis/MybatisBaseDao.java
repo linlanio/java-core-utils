@@ -1,5 +1,5 @@
 /**
- * Copyright 2020-2023 the original author or Linlan authors.
+ * Copyright 2015-2017 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -39,13 +39,6 @@ public interface MybatisBaseDao<T> {
      */
     List<T> getList(Map<String, Object> map);
 
-    /** get page of entity with input map conditions
-     *
-     * @param map the input conditions
-     * @return the Page of T
-     */
-    List<T> getPage(Map<String, Object> map);
-
     /** find the entity by id
      *
      * @param id the id
@@ -59,17 +52,11 @@ public interface MybatisBaseDao<T> {
      */
     void save(T t);
 
-    /** save entity of input map
-     *
-     * @param map the value in map
-     */
-    void save(Map<String, Object> map);
-
     /** batch save entity of input list
      *
      * @param list the list of T
      */
-    void save(List<T> list);
+    void batchSave(List<T> list);
 
     /** update entity of input t
      *
@@ -77,13 +64,6 @@ public interface MybatisBaseDao<T> {
      * @return the result of update
      */
     int update(T t);
-
-    /** update entity of input map
-     *
-     * @param map the value in map
-     * @return the result of update
-     */
-    int update(Map<String, Object> map);
 
     /** save entity of input map
      *
@@ -99,13 +79,6 @@ public interface MybatisBaseDao<T> {
      */
     int deleteByIds(Object[] ids);
 
-    /** delete entity of input map
-     *
-     * @param map the value in map
-     * @return the result of delete
-     */
-    int delete(Map<String, Object> map);
-
     /** get the total result
      *
      * @return total count
@@ -120,4 +93,3 @@ public interface MybatisBaseDao<T> {
     int getCount(Map<String, Object> map);
 
 }
-
