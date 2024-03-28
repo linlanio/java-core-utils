@@ -5,6 +5,9 @@ JAVA代码核心工具类，包括核心、缓存、系统、脚本处理，数�
 ## 版本历史
 ```
 
+2.4.1   2024-03-28      将xml文件内save(list)方法，调整为batchSave(list)
+                        删除delete(map)方法
+                        
 2.4.0     2024-03-21    取消版本的变量形式，直接调整为具体数字
                         调整为一级子包模式，删除commons-parent和datas-parent目录
 
@@ -105,13 +108,13 @@ git config --list
 5. 创建和提交tag
 ```
 创建
-git tag -a 2.4.0 -m "create union version and bug"
+git tag -a 2.4.1 -m "将xml文件内save(list)方法，调整为batchSave(list)；删除delete(map)方法"
 查看
 git tag
 提交
 git push origin --tags
 删除
-git tag -d 2.4.0
+git tag -d 2.4.1
 
 本地编译：mvn clean install
 发布到github：mvn clean deploy
