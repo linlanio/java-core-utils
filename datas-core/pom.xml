@@ -6,7 +6,7 @@
     <groupId>io.linlan.tools</groupId>
     <artifactId>datas-core</artifactId>
     <packaging>jar</packaging>
-    <version>2.4.0</version>
+    <version>2.4.1</version>
     <name>datas-core</name>
 
     <properties>
@@ -116,22 +116,22 @@
         <dependency>
             <groupId>io.linlan.tools</groupId>
             <artifactId>commons-core</artifactId>
-            <version>2.4.0</version>
+            <version>2.4.1</version>
         </dependency>
         <dependency>
             <groupId>io.linlan.tools</groupId>
             <artifactId>commons-db</artifactId>
-            <version>2.4.0</version>
+            <version>2.4.1</version>
         </dependency>
         <dependency>
             <groupId>io.linlan.tools</groupId>
             <artifactId>commons-script</artifactId>
-            <version>2.4.0</version>
+            <version>2.4.1</version>
         </dependency>
         <dependency>
             <groupId>io.linlan.tools</groupId>
             <artifactId>commons-cache</artifactId>
-            <version>2.4.0</version>
+            <version>2.4.1</version>
         </dependency>
 
     </dependencies>
