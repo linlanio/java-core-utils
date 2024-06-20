@@ -1,9 +1,11 @@
-# java-core-utils
+# java-tools-parent
 ## 介绍
 JAVA代码核心工具类，包括核心、缓存、系统、脚本处理，数据处理等通用工具方法
 
 ## 版本历史
 ```
+
+2.5.0   2024-06-20      parent工程名称修改，github路径修改为：java-tools-parent
 
 2.4.1   2024-03-28      将xml文件内save(list)方法，调整为batchSave(list)
                         删除delete(map)方法

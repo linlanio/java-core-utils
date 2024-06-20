@@ -95,7 +95,7 @@
         <repository>
             <id>github</id>
             <name>GitHub LinlanIO Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/linlanio/java-core-utils</url>
+            <url>https://maven.pkg.github.com/linlanio/java-tools-parent</url>
         </repository>
     </distributionManagement>
 

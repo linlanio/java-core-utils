@@ -4,11 +4,11 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>io.linlan.utils</groupId>
-    <artifactId>java-core-utils</artifactId>
+    <groupId>io.linlan.tools</groupId>
+    <artifactId>java-tools-parent</artifactId>
     <packaging>pom</packaging>
-    <version>2.4.1</version>
-    <name>java-core-utils</name>
+    <version>2.5.0</version>
+    <name>java-tools-parent</name>
     <description>
         The commons uitls include core, cache, log, script etc, for all the projects to use.
         The data utils include JdbcUtils, SolrUtils, ElasticUtils, Echarts utils.
@@ -37,7 +37,7 @@
         <repository>
             <id>github</id>
             <name>GitHub LinlanIO Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/linlanio/java-core-utils</url>
+            <url>https://maven.pkg.github.com/linlanio/java-tools-parent</url>
         </repository>
     </distributionManagement>
 
