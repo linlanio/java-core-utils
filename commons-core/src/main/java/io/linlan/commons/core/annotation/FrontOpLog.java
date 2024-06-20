@@ -19,11 +19,11 @@ import java.lang.annotation.*;
 
 /**
  * the class of plat log annotation
- * Filename:PlatLog.java
- * Desc:the plat log annotation for common use
+ * Filename:FrontOpLog.java
+ * Desc:the plat log annotation for citizen user
  *
  * @author Linlan
- * CreateTime:2020-07-08 11:45 AM
+ * CreateTime:2024-05-08 11:45 AM
  *
  * @version 1.0
  * @since 1.0
@@ -32,15 +32,37 @@ import java.lang.annotation.*;
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-public @interface PlatLog {
+public @interface FrontOpLog {
 
-    /**
+    /** 操作名称
      * @return the default is ""
      */
     String value() default "";
 
-    /** the Plat Log Category
-     * @return Input category
+    /** 服务类型
+     * @return the default is ""
+     */
+    String type() default "";
+
+    /** 类型
+     * @return the default is ""
+     */
+    String funcOp() default "";
+
+    /** 子类型
+     * @return the default is ""
+     */
+    String funcOpSub() default "";
+    /** 3级子类型
+     * @return the default is ""
+     */
+    String funcOpSub3() default "";
+    /** 4级子类型
+     * @return the default is ""
+     */
+    String funcOpSub4() default "";
+    /** 日志来源
+     * @return the default 10
      */
     int srcCode() default 10;
 

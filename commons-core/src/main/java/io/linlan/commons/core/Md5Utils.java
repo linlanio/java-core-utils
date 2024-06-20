@@ -27,7 +27,7 @@ import java.security.NoSuchAlgorithmException;
  * Desc:String utils include isBlank, startsWith, trim methods
  * the utils is for commons group packages to use
  *
- * Createtime 2020/6/30 8:41 PM
+ * CreateTime 2020/6/30 8:41 PM
  *
  * @version 1.0
  * @since 1.0

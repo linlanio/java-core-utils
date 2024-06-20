@@ -21,7 +21,7 @@ package io.linlan.commons.core;
  * Desc:CoreException to extends RuntimeException
  * and provide all exception catch to commons group
  *
- * Createtime 2020/6/28 10:07 PM
+ * CreateTime 2020/6/28 10:07 PM
  *
  * @version 1.0
  * @since 1.0

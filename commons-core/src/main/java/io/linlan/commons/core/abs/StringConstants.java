@@ -21,7 +21,7 @@ package io.linlan.commons.core.abs;
  * Desc:the constants of string, in this class to define constants
  * const for character, such as " \ .
  *
- * Createtime 2020/6/23 15:45
+ * CreateTime 2020/6/23 15:45
  *
  * @version 1.0
  * @since 1.0
@@ -86,7 +86,7 @@ public abstract class StringConstants {
      * dot of string
      */
     public static final String DOT = ".";
-    public static final String DOUBLE_DOT = "src/main";
+    public static final String DOUBLE_DOT = "..";
 
     /**
      * slash of string
@@ -126,5 +126,6 @@ public abstract class StringConstants {
      */
     public static final int MAX_SPLIT_LIMIT = 16;
     public static final String CLASSPATH_PREFIX = "classpath:";
+    public static final String NULL = "null";
 
 }

@@ -13,35 +13,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.linlan.commons.core.annotation;
-
-import java.lang.annotation.*;
+package io.linlan.commons.db.abs;
 
 /**
- * the class of plat log annotation
- * Filename:PlatLog.java
- * Desc:the plat log annotation for common use
  *
- * @author Linlan
- * CreateTime:2020-07-08 11:45 AM
+ * Filename:IPriority.java
+ * Desc:
+ *
+ * CreateTime:2020-08-06 11:42 AM
  *
  * @version 1.0
  * @since 1.0
  *
  */
-@Target(ElementType.METHOD)
-@Retention(RetentionPolicy.RUNTIME)
-@Documented
-public @interface PlatLog {
+public interface IPriority {
 
     /**
-     * @return the default is ""
+     * Gets the priority，排序方法.
+     *
+     * @return the priority，排序方法
      */
-    String value() default "";
+    Number getPriority();
 
-    /** the Plat Log Category
-     * @return Input category
+    /**
+     * Gets the id.
+     *
+     * @return the id
      */
-    int srcCode() default 10;
-
+    Number getId();
 }

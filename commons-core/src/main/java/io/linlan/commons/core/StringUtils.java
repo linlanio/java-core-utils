@@ -30,7 +30,7 @@ import java.util.Map.Entry;
  * Desc:String utils include isBlank, startsWith, trim methods
  * the utils is for commons group packages to use
  *
- * Createtime 2020/6/30 8:41 PM
+ * CreateTime 2020/6/30 8:41 PM
  *
  * @version 1.0
  * @since 1.0
@@ -61,6 +61,9 @@ public final class StringUtils extends StringConstants {
             return true;
         }
 
+        if (source.equals(NULL)){
+            return true;
+        }
         for (int i = 0; i < length; i++) {
             // if has any char then not null
             if (false == NumberUtils.isBlankChar(source.charAt(i))) {
@@ -1645,6 +1648,46 @@ public final class StringUtils extends StringConstants {
         return str.toString();
     }
 
+    /**
+     *
+     * @param str
+     * @param delimiters
+     * @param trimTokens
+     * @param ignoreEmptyTokens
+     * @return
+     */
+    public static String[] tokenizeToStringArray(
+            String str, String delimiters, boolean trimTokens, boolean ignoreEmptyTokens) {
+
+        if (str == null) {
+            return null;
+        }
+
+        StringTokenizer st = new StringTokenizer(str, delimiters);
+        List<String> tokens = new ArrayList<String>();
+        while (st.hasMoreTokens()) {
+            String token = st.nextToken();
+            if (trimTokens) {
+                token = token.trim();
+            }
+            if (!ignoreEmptyTokens || token.length() > 0) {
+                tokens.add(token);
+            }
+        }
+        return toStringArray(tokens);
+    }
+
+    /**
+     *
+     * @param collection
+     * @return
+     */
+    public static String[] toStringArray(Collection<String> collection) {
+        if (collection == null) {
+            return null;
+        }
+        return collection.toArray(new String[collection.size()]);
+    }
 
 }
 

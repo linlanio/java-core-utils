@@ -1,5 +1,5 @@
 /**
- * Copyright 2015-2017 the original author or Linlan authors.
+ * Copyright 2020-2023 the original author or Linlan authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ import java.util.Map;
  * Desc:Need to define and implement the method in annotation or
  * in XML
  *
- * CreateTime:2017-07-03 1:57 PM
+ * CreateTime:2020-07-03 1:57 PM
  *
  * @version 1.0
  * @since 1.0
@@ -78,12 +78,6 @@ public interface MybatisBaseDao<T> {
      * @return the result of delete
      */
     int deleteByIds(Object[] ids);
-
-    /** get the total result
-     *
-     * @return total count
-     */
-    int getTotal();
 
     /** get the count by select conditions
      *

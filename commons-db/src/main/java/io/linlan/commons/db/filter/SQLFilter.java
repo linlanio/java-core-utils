@@ -23,7 +23,6 @@ import io.linlan.commons.core.StringUtils;
  * Filename:SQLFilter.java
  * Desc: use the sqlInject method to avoid SQL inject
  *
- * @author <a href="mailto:20400301@qq.com">linlan</a>
  * CreateTime:2020-07-29 2:02 PM
  *
  * @version 1.0

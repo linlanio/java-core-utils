@@ -41,6 +41,7 @@ public class DateUtils {
     private static String ZERO = "0";
 
     /** time format of yyyy-MM-dd */
+    public final static String yyyyMM = "yyyyMM";
     public final static String yyyyMMdd = "yyyy-MM-dd";
     public static final String yyyyMMdd_simple = "yyyyMMdd";
 
@@ -131,6 +132,7 @@ public class DateUtils {
     /**
      * 获取系统时间<br>
      * DateUtils.formatDateTime(new Date())<br>
+     * 2016-02-25 17:23:49
      */
     public static String formatDate(Date date) {
         if (date == null) {
@@ -177,10 +179,10 @@ public class DateUtils {
     }
 
     public static void main(String[] args) {
-        String date1 = "年7月";
-        String date2 = "年07月";
-        String date3 = ".08";
-        String date4 = ".8";
+        String date1 = "2014年7月";
+        String date2 = "2014年07月";
+        String date3 = "2014.08";
+        String date4 = "2014.8";
 
         Date d1 = parseDate(date1);
         Date d2 = parseDate(date2);
@@ -422,6 +424,7 @@ public class DateUtils {
     /**
      * 得到今天的最开始时间
      *
+     * @author 刘俊 2015年8月6日
      * @return 今天的最开始时间
      */
     public static Date getTodayBeginTime() {
@@ -434,6 +437,7 @@ public class DateUtils {
     /**
      * 得到今天的最后结束时间
      *
+     * @author 刘俊 2015年8月6日
      * @return 今天的最后时间
      */
     public static Date getTodayEndTime() {
@@ -681,6 +685,7 @@ public class DateUtils {
         if (calendar instanceof GregorianCalendar) {
             // System.out.println("属于GregorianCalendar类的实例!");
         }
+        // 设置当前时间为:2011-07-24 11:06:00
         calendar.setTime(new Date());
         int year = calendar.get(Calendar.YEAR); // 获取年;
         int month = calendar.get(Calendar.MONTH); // 获取月;
@@ -784,7 +789,7 @@ public class DateUtils {
     /**
      * 获取当前月. 格式: YYYY
      *
-     * @author 刘俊 年11月12日
+     * @author 刘俊 2014年11月12日
      * @return
      */
     public static int getCurrentYear() {
@@ -794,7 +799,7 @@ public class DateUtils {
     /**
      * 获取当前月
      *
-     * @author 刘俊 年11月12日
+     * @author 刘俊 2014年11月12日
      * @return
      */
     public static int getCurrentMonth() {

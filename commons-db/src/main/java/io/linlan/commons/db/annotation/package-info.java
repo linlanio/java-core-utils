@@ -13,35 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.linlan.commons.core.annotation;
-
-import java.lang.annotation.*;
-
 /**
- * the class of plat log annotation
- * Filename:PlatLog.java
- * Desc:the plat log annotation for common use
  *
- * @author Linlan
- * CreateTime:2020-07-08 11:45 AM
+ * package:io.linlan.commons.db.annotation
+ * Desc:the package to provide db annotation utils.
+ * All the method provide to db group
+ *
+ * CreateTime:2020-08-08 8:59 PM
  *
  * @version 1.0
  * @since 1.0
  *
  */
-@Target(ElementType.METHOD)
-@Retention(RetentionPolicy.RUNTIME)
-@Documented
-public @interface PlatLog {
-
-    /**
-     * @return the default is ""
-     */
-    String value() default "";
-
-    /** the Plat Log Category
-     * @return Input category
-     */
-    int srcCode() default 10;
-
-}
+package io.linlan.commons.db.annotation;
